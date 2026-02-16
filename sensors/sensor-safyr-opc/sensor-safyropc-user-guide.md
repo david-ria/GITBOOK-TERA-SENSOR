@@ -50,8 +50,7 @@ The outputs are expressed in number of particles per cubic meter (Pcs/m3) within
 * The Tx and Rx signal logical level is TTL (+3.3V) and the Rx signal is +5V tolerant.
 * The signal DE/RE is useful only in case of RS485 half duplex mode use, to drive the external RS485 transceiver, otherwise, it could be left unconnected (high impedance).
 * The ADAM TECH _125CH-B-06_ or MOLEX _51021-0600_ connector can be purchased to connect the Sensor SafyrOPC..\
-  To connect the Sensor SafyrOPC to a PC, a FTDI cable such as _TTL-232R-3V3 (supplier: FTDI chip)_ can be used.\
-
+  To connect the Sensor SafyrOPC to a PC, a FTDI cable such as _TTL-232R-3V3 (supplier: FTDI chip)_ can be used.<br>
 
 <mark style="color:red;">Warning : do not connect the sensor directly on the RS232 port of a PC or to a RS485 network.</mark>
 
@@ -77,8 +76,7 @@ It will not take into account the global casing used by the integrator and adjus
 
 The Sensor SafyrOPC makes continuous internal diagnosis in order to let the user know the state of the sensor and so, the validity of the measurements.
 
-The state is coded on 2 bytes (1) and it contents flags corresponding to errors which can occur:\
-
+The state is coded on 2 bytes (1) and it contents flags corresponding to errors which can occur:<br>
 
 | Bit 15 | Bit 14 | Bit 13 | Bit 12 | Bit 11 | Bit 10 | Bit 9 | Bit 8                      |
 | ------ | ------ | ------ | ------ | ------ | ------ | ----- | -------------------------- |
@@ -89,18 +87,15 @@ The state is coded on 2 bytes (1) and it contents flags corresponding to errors 
 | Laser Error | Memory Error | Fan Error | T/RH Error | -     | Not Ready | Degraded State | Sleep State |
 
 * bit 0: set if the user has sent a sleep mode command or if the sensor is in default state (bit 8).\
-  In simple protocol, the only authorized command still possible is a Sensor SafyrOPC state read.\
-
+  In simple protocol, the only authorized command still possible is a Sensor SafyrOPC state read.<br>
 * bit 1: set each time a minor error is detected and confirmed. The corresponding minor error flag is set. In this state, the Sensor SafyrOPC can still measure data but with less accuracy.\
   The minor errors are the following:
   * bit 4: T/RH Error: the sensor reading are out of specification
   * bit 5: Fan Error: the fan speed is out of range but the fan is still working
   * bit 6: Memory Error: the sensor can’t access its memory, some internal smart functions will not be available.
-  * bit 7: Laser Error: the photodetector is not detecting any particle for at least 240 secs resulting from a possible laser error.\
-
+  * bit 7: Laser Error: the photodetector is not detecting any particle for at least 240 secs resulting from a possible laser error.<br>
 * bit 2: set at power on, meaning that the sensor is starting and that measurements are not yet reliable until the bit is clear. It lasts 15 seconds.\
-  This bit is also set after a wake-up of the sensor (sleep mode exit)\
-
+  This bit is also set after a wake-up of the sensor (sleep mode exit)<br>
 * bit 8: set if the fan has stopped working, after 3 restart attempts, the sensor will switch to the default mode, set the default state flag meanwhile the degraded state flag is clear and the sensor goes into sleep mode.
 
 
@@ -141,8 +136,7 @@ The simple protocol uses the following frame format:
 
 * Reading:
   * Request: address (0x81) + command function code + checksum
-  * Response: address (0x81) + command function code + data + checksum\
-
+  * Response: address (0x81) + command function code + data + checksum<br>
 * Writing:
   * Request: address (0x81) + command function code + data + checksum
   * Response: address (0x81) + command function code + checksum
@@ -225,8 +219,7 @@ The Sensor SafyrOPC replies to its firmware version. If the Sensor SafyrOPC is i
 
 (1) At each 0x15 command frame sent, the Sensor SafyrOPC changes its functional state alternately. To know its state (see Status code description) before sending the command frame, the user can send a 0x16 command frame
 
-(2) The 0x22 command is used to write the new modbus address. The third byte (here 0x03) is the address, which must be different from 0. See 0x22 command reply.\
-
+(2) The 0x22 command is used to write the new modbus address. The third byte (here 0x03) is the address, which must be different from 0. See 0x22 command reply.<br>
 
 #### 2.2.4 Writing replies <a href="#hsvrmoaf0nin" id="hsvrmoaf0nin"></a>
 
@@ -275,8 +268,7 @@ It won’t send back any response in case of:
 
 ### 2.3 Modbus Protocol <a href="#id-2bn6wsx" id="id-2bn6wsx"></a>
 
-The second way to get data from the Sensor SafyrOPC sensor is using the modbus protocol, respecting the modbus standard (v1.1b modbus specification compliance).\
-
+The second way to get data from the Sensor SafyrOPC sensor is using the modbus protocol, respecting the modbus standard (v1.1b modbus specification compliance).<br>
 
 #### 2.3.1 General information <a href="#fni7gn4wn53c" id="fni7gn4wn53c"></a>
 
@@ -290,16 +282,14 @@ Example: 0x01 0x03 0x04 0xB5 0x7F 0x02 0x71 0x2C 0xA3, is the reply of particles
 
 #### **2.3.1.2**          Modbus default address <a href="#bn72zd1careh" id="bn72zd1careh"></a>
 
-The default modbus address is 0x01 but it can be changed by sending a simple protocol write command frame or modbus command write frame. The change is saved into its memory and is kept even after a restart.\
-
+The default modbus address is 0x01 but it can be changed by sending a simple protocol write command frame or modbus command write frame. The change is saved into its memory and is kept even after a restart.<br>
 
 #### **2.3.1.3**          Timings <a href="#bvybl8ehgdqa" id="bvybl8ehgdqa"></a>
 
 Timings are the ones specified in Serial communication configuration:
 
 * The Sensor SafyrOPC considers a timeout when there is 50ms of idle state between 2 bytes.
-* The Sensor SafyrOPC delay is 50 ms (beginning of the reply to a request).\
-
+* The Sensor SafyrOPC delay is 50 ms (beginning of the reply to a request).<br>
 
 #### **2.3.1.4**          Function codes <a href="#id-6whfxgq676pt" id="id-6whfxgq676pt"></a>
 
@@ -398,12 +388,10 @@ The Sensor SafyrOPC is able to make specific reply depending on the Modbus frame
     * reply: ModbusAdress 0x80|CF 0x01 CRC1 CRC2
   * Inexistant registers (write)
     * reply: ModbusAdress 0x80|CF 0x02 CRC1 CRC2\
-      note: only true for 0x10 code function. For the 0x17 code function, the Sensor SafyrOPC sends back correctly the data read, without any error code.\
-
+      note: only true for 0x10 code function. For the 0x17 code function, the Sensor SafyrOPC sends back correctly the data read, without any error code.<br>
 * **No reply**, in case of:
   * wrong checksum
-  * wrong Modbus address\
-
+  * wrong Modbus address<br>
 * **Standard reply**, even if the frame received is partially correct:
   * Registers quantity exceeding the maximum allowed:
     * 125 registers to be read in a single time

@@ -280,8 +280,7 @@ The format of the frames are defined by the Modbus standard and the content is d
 
 
 
-Note: 2 Safyr OPC devices having the same serial number ending should not be connected to the same Safyr OPC Receiver.\
-
+Note: 2 Safyr OPC devices having the same serial number ending should not be connected to the same Safyr OPC Receiver.<br>
 
 ● 0x00 is the first register to access. It could be changed up to the 0x14, but the 2 next fields (number of registers) should be filled in accordingly.
 

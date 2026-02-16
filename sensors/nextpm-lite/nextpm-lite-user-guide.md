@@ -67,8 +67,7 @@ The Serial Communication available on the NextPM Lite are:
 * The ADAM TECH _125CH-B-05_ or MOLEX _51021-0500_ connector can be purchased to connect the NextPM Lite Sensor..\
   To connect the NextPM Lite to a PC, a FTDI cable such as _TTL-232R-3V3 (supplier: FTDI chip)_ can be used.
 * The serial communication is available thanks to PIN 3 and 4 and the NextPM Lite behaves as the slave during the communication, it will reply to command orders from the master.
-* Note: 2 pull-up resistors should be mounted on each line (SDA and SCL). Their value should be chosen by the customer depending on the communication bus characteristics (speed rate, bus capacity, …). Typically, the standard value is 4.7kOhm.\
-
+* Note: 2 pull-up resistors should be mounted on each line (SDA and SCL). Their value should be chosen by the customer depending on the communication bus characteristics (speed rate, bus capacity, …). Typically, the standard value is 4.7kOhm.<br>
 
 <mark style="color:red;">Warning : do not connect NextPM Lite sensor directly on the RS232 port of a PC or to a RS485 network.</mark>
 
@@ -88,8 +87,7 @@ At the power on of the sensor or at the sleep mode exit, the measurements are re
 
 The NextPM Lite makes continuous internal diagnosis in order to let the user know the state of the sensor and so, the validity of the measurements.
 
-The state is coded on 2 bytes (1) and it contents flags corresponding to errors which can occur:\
-
+The state is coded on 2 bytes (1) and it contents flags corresponding to errors which can occur:<br>
 
 | Bit 15 | Bit 14 | Bit 13 | Bit 12 | Bit 11 | Bit 10 | Bit 9 | Bit 8                      |
 | ------ | ------ | ------ | ------ | ------ | ------ | ----- | -------------------------- |
@@ -100,16 +98,13 @@ The state is coded on 2 bytes (1) and it contents flags corresponding to errors 
 | Laser Error | Unused | Fan Error | Unused | Unused | Not Ready | Degraded State | Sleep State |
 
 * bit 0: set if the user has sent a sleep mode command or if the sensor is in default state (bit 8).\
-  In simple protocol, the only authorized command still possible is a NextPM Lite state read.\
-
+  In simple protocol, the only authorized command still possible is a NextPM Lite state read.<br>
 * bit 1: set each time a minor error is detected and confirmed. The corresponding minor error flag is set. In this state, the NextPM Lite can still measure data but with less accuracy.\
   The minor errors are the following:
   * bit 5: Fan Error: the fan speed is out of range but the fan is still working
-  * bit 7: Laser Error: the photodetector is not detecting any particle for at least 240 secs resulting from a possible laser error.\
-
+  * bit 7: Laser Error: the photodetector is not detecting any particle for at least 240 secs resulting from a possible laser error.<br>
 * bit 2: set at power on, meaning that the sensor is starting and that measurements are not yet reliable until the bit is clear. It lasts 15 seconds.\
-  This bit is also set after a wake-up of the sensor (sleep mode exit)\
-
+  This bit is also set after a wake-up of the sensor (sleep mode exit)<br>
 *   bit 8: set if the fan has stopped working, after 3 restart attempts, the sensor will switch to the default mode, set the default state flag meanwhile the degraded state flag is clear and the sensor goes into sleep mode. In the same way, if no particles are detected for a period exceeding 12 minutes, then the sensor goes into default state and into sleep mode.
 
     (1) The 8 most significant bits are only available using modbus protocol
@@ -140,8 +135,7 @@ The simple protocol uses the following frame format:
 
 * Reading:
   * Request: address (0x81) + command function code + checksum
-  * Response: address (0x81) + command function code + data + checksum\
-
+  * Response: address (0x81) + command function code + data + checksum<br>
 * Writing:
   * Request: address (0x81) + command function code + data + checksum
   * Response: address (0x81) + command function code + checksum
@@ -228,8 +222,7 @@ The NextPM Lite replies to its firmware version. If the NextPM Lite is in the SL
 
 (1) At each 0x15 command frame sent, the NextPM Lite changes its functional state alternately. To know its state (see Status code description) before sending the command frame, the user can send a 0x16 command frame
 
-(2) The 0x22 command is used to write the new modbus address. The third byte (here 0x03) is the address, which must be different from 0. See 0x22 command reply.\
-
+(2) The 0x22 command is used to write the new modbus address. The third byte (here 0x03) is the address, which must be different from 0. See 0x22 command reply.<br>
 
 #### 2.2.4 Writing replies <a href="#hsvrmoaf0nin" id="hsvrmoaf0nin"></a>
 
@@ -274,8 +267,7 @@ It won’t send back any response in case of:
 
 ### 2.3 Modbus Protocol <a href="#id-2bn6wsx" id="id-2bn6wsx"></a>
 
-The second way to get data from the NextPM Lite sensor is using the modbus protocol, respecting the modbus standard (v1.1b modbus specification compliance).\
-
+The second way to get data from the NextPM Lite sensor is using the modbus protocol, respecting the modbus standard (v1.1b modbus specification compliance).<br>
 
 #### 2.3.1 General information <a href="#fni7gn4wn53c" id="fni7gn4wn53c"></a>
 
@@ -289,16 +281,14 @@ Example: 0x01 0x03 0x04 0x4E 0x10 0x00 0x03 0xAC 0xDF, is the reply of PM2.5 mea
 
 #### 2.3.1.2          Modbus default address <a href="#bn72zd1careh" id="bn72zd1careh"></a>
 
-Default modbus address is 0x01 but it can be changed by sending a simple protocol write command frame or modbus command write frame. The change is saved into its memory and is kept even after a restart.\
-
+Default modbus address is 0x01 but it can be changed by sending a simple protocol write command frame or modbus command write frame. The change is saved into its memory and is kept even after a restart.<br>
 
 2.3.1.3          Timings
 
 Timings are the ones specified in Serial communication configuration:
 
 * The NextPM Lite considers a timeout when there is 50ms of idle state between 2 bytes.
-* The NextPM Lite delay is 50 ms (beginning of the reply to a request).\
-
+* The NextPM Lite delay is 50 ms (beginning of the reply to a request).<br>
 
 #### 2.3.1.4          Function codes <a href="#id-6whfxgq676pt" id="id-6whfxgq676pt"></a>
 
@@ -353,8 +343,7 @@ _The following registers are only readable and accessible with a read or read/wr
 **Measurement decoding example :**
 
 * PM1, PM2.5 and PM10 concentrations request command: 01 03 00 32 00 24 E4 1E
-* Sensor’s reply :01 03 48 62 4F 00 25 62 4F 00 25 62 4F 00 25 00 EC 00 00 00 EC 00 00 00 EC 00 00 6A 5D 00 13 99 6F 00 14 57 22 00 15 00 5E 00 00 01 82 00 00 03 A8 00 00 00 ED 00 17 CA FA 00 17 FE 29 00 17 00 A7 00 00 01 C8 00 00 02 69 00 00 77 09\
-
+* Sensor’s reply :01 03 48 62 4F 00 25 62 4F 00 25 62 4F 00 25 00 EC 00 00 00 EC 00 00 00 EC 00 00 6A 5D 00 13 99 6F 00 14 57 22 00 15 00 5E 00 00 01 82 00 00 03 A8 00 00 00 ED 00 17 CA FA 00 17 FE 29 00 17 00 A7 00 00 01 C8 00 00 02 69 00 00 77 09<br>
   * Calculation of the 10s average of the particles number concentration / liter whose size is < 1μm :
     * 0x624F is the less significant word and 0x0025 is the most significant word
     * the concatenate value (raw value) is 0x0025624F which is 2449999 in decimal. This is the measured physical value in Nb/L, averaged over 10 seconds.
