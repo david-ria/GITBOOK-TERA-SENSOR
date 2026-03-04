@@ -25,6 +25,10 @@
   * [Sensor SafyrOPC User Guide](sensors/sensor-safyr-opc/sensor-safyropc-user-guide.md)
   * [Software](sensors/sensor-safyr-opc/software.md)
   * [3D / Step  files](sensors/sensor-safyr-opc/3d-step-files.md)
+* [NextCO2](sensors/nextco2/README.md)
+  * [NextCO2 datasheet](sensors/nextco2/nextco2-datasheet.md)
+  * [NextCO2 User Guide](sensors/nextco2/nextco2-user-guide.md)
+  * [Software](sensors/nextco2/software.md)
 
 ## DEVICES
 
