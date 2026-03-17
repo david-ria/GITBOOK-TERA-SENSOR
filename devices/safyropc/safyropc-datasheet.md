@@ -25,7 +25,6 @@ icon: newspaper
 | **Unit**                                                        | Particles per Cubic Feet (Part/CF)                                                                                                       |
 | **Calibration**                                                 | Monodisperse latex sphere (NIST certificate) - ISO 21501-4 calibration bench                                                             |
 | **Counting efficiency: Manufacturer**                           | <p>Channel 0.3µm: (35 +/- 15) %</p><p>Channel 0.5µm: (100 +/- 20) %</p>                                                                  |
-| **Counting efficiency: Using Lyra (Corrected )**                | <p>Channel 0.3µm: (5 +/- 20) %</p><p>Channel 0.5µm: (100 +/-10) %</p>                                                                    |
 | **Statistical rate of false counting (All Channels ≥ 0.3 µm):** | ≤ 70.7 part/m³ or ≤ 2 part/CF³                                                                                                           |
 | **Power**                                                       | On batteries or mains 5VDC - 1A                                                                                                          |
 | **Energy Block SB Model:**                                      | Autonomy (O mains): 12h - LiPo battery 3.7V 4.5Ah                                                                                        |
