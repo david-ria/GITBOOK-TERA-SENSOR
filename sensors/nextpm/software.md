@@ -16,7 +16,7 @@ Depending on windows / cable version, consider downloading cable firmware if you
 
 
 
-2. NextPM Software
+### 2. NextPM Software
 
 [Windows software](https://tera-sensor.com/wp-content/uploads/2025/10/Demo_Sotware_NextPM.zip)
 
