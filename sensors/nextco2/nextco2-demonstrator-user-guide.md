@@ -2,7 +2,7 @@
 icon: lightbulb-on
 ---
 
-# DELICA Demonstrator User Guide
+# NextCO2 Demonstrator User Guide
 
 
 
@@ -147,9 +147,9 @@ Warning: Using the data smoothing slows down the sensor’s response time.
 
 
 
-### 3.4 Use of updated algorithm sent by Tera Sensor <a href="#use-of-updated-algorithm-sent-by-tera-sensor" id="use-of-updated-algorithm-sent-by-tera-sensor"></a>
+### 3.4 Use of updated algorithm sent by TERA Sensor <a href="#use-of-updated-algorithm-sent-by-tera-sensor" id="use-of-updated-algorithm-sent-by-tera-sensor"></a>
 
-If a new algorithm is needed for the demonstrator, Tera Sensor will send you a file named “Reg\_Coeff.ini”.
+If a new algorithm is needed for the demonstrator, TERA Sensor will send you a file named “Reg\_Coeff.ini”.
 
 First, it is necessary to close the application (section 3.5). Then, replace the file “Reg\_Coeff.ini” located in the same folder as the application by the new file sent by Tera Sensor.
 
