@@ -26,7 +26,7 @@
   * [Software](sensors/sensor-safyr-opc/software.md)
   * [3D / Step  files](sensors/sensor-safyr-opc/3d-step-files.md)
 * [NextCO2](sensors/nextco2/README.md)
-  * [NextCO2 Demonstrator User Guide](sensors/nextco2/nextco2-demonstrator-user-guide.md)
+  * [NextCO2 Demonstrator User Guide](sensors/nextco2/delica-demonstrator-user-guide.md)
   * [Software](sensors/nextco2/software.md)
 
 ## DEVICES
