@@ -10,5 +10,5 @@ icon: windows
 
 ### 2. Delica Software
 
-[Demp Software V3.1  (install LabView libraries first)](https://tera-sensor.com/wp-content/uploads/2026/04/DEMO_DELICA_V3_1.zip)
+[Demo Software V3.1  (install LabView libraries first)](https://tera-sensor.com/wp-content/uploads/2026/04/DEMO_DELICA_V3_1.zip)
 
