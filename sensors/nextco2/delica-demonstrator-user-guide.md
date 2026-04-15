@@ -99,7 +99,7 @@ Fixation hole size is 3.4 mm.
 
 ## 3. Software <a href="#software" id="software"></a>
 
-![](<../../.gitbook/assets/Unknown image (3)>)
+![](<../../.gitbook/assets/Capture d'écran 2026-04-15 081514.png>)
 
 _Figure 4: Demonstration software_
 
