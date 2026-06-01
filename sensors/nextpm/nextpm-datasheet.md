@@ -1,6 +1,24 @@
 ---
 description: NEXT GENERATION PARTICULATE MATTER OEM SENSOR PM 10, PM 2.5, PM 1
 icon: newspaper
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # NextPM datasheet
@@ -35,7 +53,7 @@ icon: newspaper
 | Power consumption in operation                      | <p>&#x3C; 80</p><p>300</p>                                                                                                                                                                                                                                 | <p>mA</p><p>mA (Maximum)</p>                                                                                                                 |
 | Power consumption in Sleep Mode                     | < 5                                                                                                                                                                                                                                                        | mA                                                                                                                                           |
 | **COMMUNICATION**                                   |                                                                                                                                                                                                                                                            |                                                                                                                                              |
-| UART, Modbus or I2C                                 | Download NextPM Lite User Guide for more informations                                                                                                                                                                                                      |                                                                                                                                              |
+| UART, Modbus                                        |                                                                                                                                                                                                                                                            |                                                                                                                                              |
 | **OTHER**                                           |                                                                                                                                                                                                                                                            |                                                                                                                                              |
 | Operating conditions                                | <p>-20 to +70 </p><p>253 to 343</p>                                                                                                                                                                                                                        | <p>°C</p><p>K</p>                                                                                                                            |
 |                                                     | 0 - 95 uncondensed                                                                                                                                                                                                                                         | %                                                                                                                                            |
