@@ -10,9 +10,9 @@ This PC software will help you connect NextPM to your computer
 
 Depending on windows / cable version, consider downloading cable firmware if you have issues with connecting with sensor.
 
-[Driver 1 ](https://tera-sensor.com/wp-content/uploads/2025/10/CH34x_Install_Windows_v3_4.zip)
+[Driver n°1 ](https://tera-sensor.com/wp-content/uploads/2025/10/CH34x_Install_Windows_v3_4.zip)
 
-Driver 2
+[Driver n°2](https://tera-sensor.com/wp-content/uploads/2025/10/CDM212364_Setup.zip)
 
 
 
