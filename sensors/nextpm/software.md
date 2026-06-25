@@ -12,7 +12,7 @@ Depending on windows / cable version, consider downloading cable firmware if you
 
 [Driver 1 ](https://tera-sensor.com/wp-content/uploads/2025/10/CH34x_Install_Windows_v3_4.zip)
 
-[Driver 2](https://tera-sensor.com/wp-content/uploads/2025/06/CDM212364_Setup.zip)
+Driver 2
 
 
 
