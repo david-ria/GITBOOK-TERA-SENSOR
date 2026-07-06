@@ -28,8 +28,8 @@ The user can find [accessories](/broken/pages/BVDxpYneBr0jrNA0FSZc) either to qu
 
 
 
-1. Only available since 0x1045 firmware version
-2. Available since firmware 0x1047 for the 3 running averages (10 sec, 1 minute and 15 minutes)
+1. Only available since 0x1045 firmware version for 10 sec average.
+2. Available since firmware 0x1047 for the 3 running averages (10 sec, 1 minute and 15 minutes).
 
 ***
 
@@ -447,7 +447,7 @@ _The following registers are only readable and accessible with a read or read/wr
 | 103 (0x67)                       | Laser status                                   | 1 for laser on 0 for laser off                                                                                             |
 | 106 (0x6A)                       | Relative humidity (internal)                   | Relative humidity in % (to be multiplied by 100)                                                                           |
 | 107 (0x6B)                       | Temperature (internal)                         | Temperature in °C (to be multiplied by 100)                                                                                |
-| 128-129 (0x80 - 0x81)            | 0.3µm to 0.5µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 0.2µm and 0.5µm (1)                                 |
+| 128-129 (0x80 - 0x81)            | 0.3µm to 0.5µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 0.3µm and 0.5µm (1)                                 |
 | 130-131 (0x82 - 0x83)            | 0.5µm to 1.0µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 0.5µm to 1.0µm (1)                                  |
 | 132-133 (0x84 - 0x85)            | 1.0µm to 2.5µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 1.0µm to 2.5µm (1)                                  |
 | 134-135 (0x86 - 0x87)            | 2.5µm to 5.0µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 2.5µm to 5.0µm (1)                                  |
