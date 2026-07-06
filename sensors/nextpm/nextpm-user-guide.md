@@ -408,6 +408,21 @@ _The following registers are only readable and accessible with a read or read/wr
 | 1 (0x01)                         | Firmware version                               | Embedded firmware version                                                                                                  |
 | 19 (0x13)                        | Status                                         | NextPM status (error codes)                                                                                                |
 | 109-110-111 (0x6D - 0x6E - 0x6F) | PM10 clogging                                  | Mass of PM10 cumulated by the sensor (divide by 10 to get the mass in milligrams, the maximum threshold is fixed to 12 mg) |
+| 20-21 (0x14 - 0x15)              | 0.3µm to 0.5µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 0.3µm and 0.5µm (1)                                 |
+| 22-23 (0x16 - 0x17)              | 0.5µm to 1.0µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 0.5µm to 1.0µm (1)                                  |
+| 24-25 (0x18 - 0x19)              | 1.0µm to 2.5µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 1.0µm to 2.5µm (1)                                  |
+| 26-27 (0x1A - 0x1B)              | 2.5µm to 5.0µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 2.5µm to 5.0µm (1)                                  |
+| 28-29 (0x1C - 0x1D)              | 5.0µm to 10.0µm quantity (Nb/L) 10 sec average | average over 10s of particles quantity per liter whose size is between 5.0µm to 10.0µm (1)                                 |
+| 30-31 (0x1E - 0x1F)              | 0.3µm to 0.5µm quantity (Nb/L) 1 min average   | average over 1min of particles quantity per liter whose size is between 0.3µm and 0.5µm (1)                                |
+| 32-33 (0x20 - 0x21)              | 0.5µm to 1.0µm quantity (Nb/L) 1 min average   | average over 1min of particles quantity per liter whose size is between 0.5µm to 1.0µm (1)                                 |
+| 34-35 (0x22 - 0x23)              | 1.0µm to 2.5µm quantity (Nb/L) 1 min average   | average over 1min of particles quantity per liter whose size is between 1.0µm to 2.5µm (1)                                 |
+| 36-37 (0x24 - 0x25)              | 2.5µm to 5.0µm quantity (Nb/L) 1 min average   | average over 1min of particles quantity per liter whose size is between 2.5µm to 5.0µm (1)                                 |
+| 38-39 (0x26 - 0x27)              | 5.0µm to 10.0µm quantity (Nb/L) 1 min average  | average over 1min of particles quantity per liter whose size is between 5.0µm to 10.0µm (1)                                |
+| 40-41 (0x28 - 0x29)              | 0.3µm to 0.5µm quantity (Nb/L) 15 min average  | average over 15min of particles quantity per liter whose size is between 0.3µm and 0.5µm (1)                               |
+| 42-43 (0x2A - 0x2B)              | 0.5µm to 1.0µm quantity (Nb/L) 15 min average  | average over 15min of particles quantity per liter whose size is between 0.5µm to 1.0µm (1)                                |
+| 44-45 (0x2C - 0x2D)              | 1.0µm to 2.5µm quantity (Nb/L) 15 min average  | average over 15min of particles quantity per liter whose size is between 1.0µm to 2.5µm (1)                                |
+| 46-47 (0x2E - 0x2F)              | 2.5µm to 5.0µm quantity (Nb/L) 15 min average  | average over 15min of particles quantity per liter whose size is between 2.5µm to 5.0µm (1)                                |
+| 48-49 (0x30 - 0x31)              | 5.0µm to 10.0µm quantity (Nb/L) 15 min average | average over 15min of particles quantity per liter whose size is between 5.0µm to 10.0µm (1)                               |
 | 50-51 (0x32 - 0x33)              | PM1 10 sec average (Nb/L)                      | average over 10s of particles quantity per liter whose size is < 1μm (1)                                                   |
 | 52-53 (0x34 - 0x35)              | PM2.5 10 sec average (Nb/L)                    | average over 10s of particles quantity per liter whose size is < 2.5μm (1)                                                 |
 | 54-55 (0x36 - 0x37)              | PM10 10 sec average (Nb/L)                     | average over 10s of particles quantity per liter whose size is < 10μm (1)                                                  |
@@ -437,11 +452,25 @@ _The following registers are only readable and accessible with a read or read/wr
 | 132-133 (0x84 - 0x85)            | 1.0µm to 2.5µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 1.0µm to 2.5µm (1)                                  |
 | 134-135 (0x86 - 0x87)            | 2.5µm to 5.0µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 2.5µm to 5.0µm (1)                                  |
 | 136-137 (0x88 - 0x89)            | 5.0µm to 10.0µm quantity (Nb/L) 10 sec average | average over 10s of particles quantity per liter whose size is between 5.0µm to 10.0µm (1)                                 |
+| 138-139 (0x8A - 0x8B)            | TSP (µg/m3) 10 sec average                     | average over 10 sec of Total Suspended Particles (TSP) mass concentration in µg/m3 (5)                                     |
+| 140-141 (0x8C - 0x8D)            | TSP (µg/m3) 1 min average                      | average over 1 min of Total Suspended Particles (TSP) mass concentration in µg/m3 (5)                                      |
+| 142-143 (0x8E - 0x8F)            | TSP (µg/m3) 15 min average                     | average over 15 min Total Suspended Particles (TSP) mass concentration in µg/m3 (5)                                        |
 | 145 (0x91)                       | External calculated Temperature (°C)           | Temperature in °C (to be multiplied by 100)                                                                                |
 | 146 (0x92)                       | External calculated Relative humidity (%)      | Relative humidity in % (to be multiplied by 100)                                                                           |
+| 147-148 (0x93-0x94)              | Unique Id Sensor number                        | Number usually included between 0 and 2000                                                                                 |
+| 149-150 (0x95-0x96)              | Batch Sensor number                            | Number of the batch to identify the sensor                                                                                 |
+| 151 (0x97)                       | PM1 coefficient (a)(3)                         | Linear regression y=ax+b function applied for PM1                                                                          |
+| 152 (0x98)                       | PM1 offset (b)(4)                              | Linear regression y=ax+b function applied for PM1                                                                          |
+| 153 (0x99)                       | PM2.5 coefficient (a)(3)                       | Linear regression y=ax+b function applied for PM2.5                                                                        |
+| 154 (0x9A)                       | PM2.5 offset (b)(4)                            | Linear regression y=ax+b function applied for PM2.5                                                                        |
+| 155 (0x9B)                       | PM10 coefficient (a)(3)                        | Linear regression y=ax+b function applied for PM10                                                                         |
+| 156 (0x9C)                       | PM10 offset (b)(4)                             | Linear regression y=ax+b function applied for PM10                                                                         |
 
-1. _See example below explaining how to decode mass and quantity concentration._
+1. See example below explaining how to decode mass and quantity concentration.
 2. _Mass concentration should be divided by 1000 to get the value in µg/m3_
+3. Slope coefficient initially set to 100 (0x00 0x64) details explained below 2.3.3
+4. Slope coefficient initially set to 10 000 (0x27 0x10) details explained below 2.3.3
+5. TSP are an estimated data extrapolated from lower size particles as NextPM inlet upper size limit is 10µm particles diameter
 
 
 
