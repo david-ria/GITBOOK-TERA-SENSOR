@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Userguide PMDuct EN
 
 Version 1.3
