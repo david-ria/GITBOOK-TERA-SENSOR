@@ -1,12 +1,13 @@
 ---
 hidden: true
+icon: lightbulb-on
 ---
 
-# Userguide PMDuct EN
+# ePMDuct User Guide
 
 Version 1.3
 
-## Versionning
+## 1. Versionning
 
 | **Version** | **Date**   | **Author**                                           | **Updates**                                                                                                            |
 | ----------- | ---------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
@@ -15,7 +16,7 @@ Version 1.3
 | V1.2        | 20/02/2026 | Vincent Bartolomei                                   | Updated version with implementation of mechanical mounting part, caution warranty and exception part, maintenance part |
 | V1.3        | 24/02/2026 | Antoine Dumas                                        | Verification                                                                                                           |
 
-## Caution and warranty exceptions
+## 2. Caution and warranty exceptions
 
 This product is not intended for use by children or disabled person, only by qualified personnel ;
 
@@ -36,7 +37,7 @@ Damages not covered by standard warranty:
 
 This product is covered by a 1-year product warranty which is valid from the date of delivery. Users are not permitted to make changes or modify the device in any way. Changes or modifications not expressly approved by the party responsible for compliance will void the user’s warranty.
 
-### European Union Directives Conformance Statement
+#### European Union Directives Conformance Statement
 
 Hereby, Tera Sensor declares that this product is in compliance with:
 
@@ -44,53 +45,43 @@ Hereby, Tera Sensor declares that this product is in compliance with:
 
 You can view your product’s Declaration of Conformity (DoC) at www.tera-sensor.com
 
-### Caring for the environment by recycling
+#### Caring for the environment by recycling
 
 Do not dispose of electrical devices or accessories with your household waste.
 
 In some countries or regions, collection systems are set up to handle electrical and electronic waste items. Contact your regional authorities for more details.
 
-## System description
+## 3. System description
 
-### About ePMDuct
+### 3.1 About ePMDuct
 
 The **ePMDuct** is an advanced air quality measurement instrument designed for real-time monitoring of particulate matter (PM) within ventilation ducts. Integrating the high-precision **NextPM** **Advanced** sensor, it provides reliable data on particle concentrations. This guide is intended to assist technical staff in the mechanical installation, wiring, and software integration of the device via the Modbus RTU protocol.
 
 It is possible to measure particles classified in 5 different channels:
 
-| PM (µg/m3)    | Number of particles (#/m3) |              |                |
-| ------------- | -------------------------- | ------------ | -------------- |
-| PM1           | PM2.5                      | PM10         | 0.3µm to 0.5µm |
-| 0.5µm to 1 µm |                            |              |                |
-|               | 1µm to 2.5µm               |              |                |
-|               |                            | 2.5µm to 5µm |                |
-|               |                            | 5µm to 10µm  |                |
+<figure><img src="../.gitbook/assets/Capture d&#x27;écran 2026-08-05 141441.png" alt=""><figcaption></figcaption></figure>
 
 Here below an overview of the product:
+
+<figure><img src="../.gitbook/assets/Capture d&#x27;écran 2026-08-05 141432.png" alt=""><figcaption></figcaption></figure>
 
 Figure 1: General description of the ePMDuct
 
 ### Pinout and electrical considerations
 
-| Pin # | Signal name |
-| ----- | ----------- |
-| 1     | 24V         |
-| 2     | RS485 B-    |
-| 3     | RS485 Gnd   |
-| 4     | Gnd         |
-| 5     | RS485 A+    |
+<figure><img src="../.gitbook/assets/Capture d&#x27;écran 2026-08-05 141700.png" alt=""><figcaption></figcaption></figure>
 
 * The ePMDuct must be power supplied with + 24 VDC / 0.5V.
 * The device has a **nominal power consumption of 2.9 W**. Under peak load (pump at maximum PWM), power consumption may reach **5.5 W**. In standby mode (measurements disabled), consumption drops to **less than 0.1 W**.
 * The M12 connector can be purchased to connect the ePMDuct. Those connectors are IP67.\
   To connect the ePMDuct to a PLC/Gateway, it is either possible to link it directly or to use a ModeLinkChainer (Tera Analytics device description here).
 
-### Generals
+### 3.3 Generals
 
 * Product specifications, such as range, precision, conditions of use, etc.., are defined into the datasheet of the ePMDuct which can be found at [https://tera-sensor.com/](https://tera-sensor.com/)
 * The user can find explanations about fluidic and mechanics to be helped for its ePMDuct use/integration by referring to the ePMDuct integration advice chapter.
 
-### Package content description
+### 3.4 Package content description
 
 Before starting the installation, please ensure that all the following items are present in the package. If any component is missing or damaged, please contact Tera Sensor support.
 
@@ -101,61 +92,17 @@ The standard ePMDuct package includes:
 * **1 x Female Mounting Plate:** To fix on the duct with 4 screws of 3.9 x 35 mm (screws not included).
 * **1 x Foam gasket:** To ensure airtight sealing between the probe and the duct.
 
-## Communication protocol Modbus RTU
+## 4. Communication protocol Modbus RTU
 
-### Read Discrete Inputs (0x03)
+### 4.1 Read Discrete Inputs (0x03)
 
-| **Registers**       | **Name**                           | **Description**                                                                                |
-| ------------------- | ---------------------------------- | ---------------------------------------------------------------------------------------------- |
-| 01 (0x01)           | ePMDuct Firmware                   | Firmware number ePMDuct                                                                        |
-| 02 (0x02)           | Timestamp ePMDuct                  | Time on (min) Reset each time tuned off/on                                                     |
-| 03 (0x03)           | Status Error ePMDuct               | ePMDuct error code                                                                             |
-| 18 (0x12)           | NextPM Adv Firmware                | Firmware number NextPM Adv                                                                     |
-| 19 (0x13)           | Status Error NextPM Adv            | NextPM Adv error code                                                                          |
-| 20-21 (0x14 - 0x15) | Number of 0.3µm to 0.5µm on 10 sec | Number of particles from 0.3µm to 0.5µm (Nb/L) with running average on 10 sec                  |
-| 22-23 (0x16 - 0x17) | Number of 0.5µm to 1µm on 10 sec   | Number of particles from 0.5µm to 1µm (Nb/L) with running average on 10 sec                    |
-| 24-25 (0x18 - 0x19) | Number of 1µm to 2.5µm on 10 sec   | Number of particles from 1µm to 2.5µm (Nb/L) with running average on 10 sec                    |
-| 26-27 (0x1A - 0x1B) | Number of 2.5µm to 5µm on 10 sec   | Number of particles from 2.5µm to 5µm (Nb/L) with running average on 10 sec                    |
-| 28-29 (0x1C - 0x1D) | Number of 5µm to 10µm on 10 sec    | Number of particles from 5µm to 10µm (Nb/L) with running average on 10 sec                     |
-| 30-31 (0x1E - 0x1F) | Number of 0.3µm to 0.5µm on 1 min  | Number of particles from 0.3µm to 0.5µm (Nb/L) with running average on 1 min                   |
-| 32-33 (0x20 - 0x21) | Number of 0.5µm to 1µm on 1 min    | Number of particles from 0.5µm to 1µm (Nb/L) with running average on 1 min                     |
-| 34-35 (0x22 - 0x23) | Number of 1µm to 2.5µm on 1 min    | Number of particles from 1µm to 2.5µm (Nb/L) with running average on 1 min                     |
-| 36-37 (0x24 - 0x25) | Number of 2.5µm to 5µm on 1 min    | Number of particles from 2.5µm to 5µm (Nb/L) with running average on 1 min                     |
-| 38-39 (0x26 - 0x27) | Number of 5µm to 10µm on 1 min     | Number of particles from 5µm to 10µm (Nb/L) with running average on 1 min                      |
-| 40-41 (0x28 - 0x29) | Number of 0.3µm to 0.5µm on 15 min | Number of particles from 0.3µm to 0.5µm (Nb/L) with running average on 15 min                  |
-| 42-43 (0x2A - 0x2B) | Number of 0.5µm to 1µm on 15 min   | Number of particles from 0.5µm to 1µm (Nb/L) with running average on 15 min                    |
-| 44-45 (0x2C - 0x2D) | Number of 1µm to 2.5µm on 15 min   | Number of particles from 1µm to 2.5µm (Nb/L) with running average on 15 min                    |
-| 46-47 (0x2E - 0x2F) | Number of 2.5µm to 5µm on 15 min   | Number of particles from 2.5µm to 5µm (Nb/L) with running average on 15 min                    |
-| 48-49 (0x30 - 0x31) | Number of 5µm to 10µm on 15 min    | Number of particles from 5µm to 10µm (Nb/L) with running average on 15 min                     |
-| 50-51 (0x32 - 0x33) | PM1 10 sec average (Nb/L)          | average over 10s of particles quantity per liter whose size is < 1μm                           |
-| 52-53 (0x34 - 0x35) | PM2.5 10 sec average (Nb/L)        | average over 10s of particles quantity per liter whose size is < 2.5μm                         |
-| 54-55 (0x36 - 0x37) | PM10 10 sec average (Nb/L)         | average over 10s of particles quantity per liter whose size is < 10μm                          |
-| 56-57 (0x38 - 0x39) | PM1 10 sec average (µg/m3)         | average over 10s of particles mass concentration (µg/m3) whose size is < 1μm1                  |
-| 58-59 (0x3A - 0x3B) | PM2.5 10 sec average (µg/m3)       | average over 10s of particles mass concentration (µg/m3) whose size is < 2.5μm1                |
-| 60-61 (0x3C - 0x3D) | PM10 10 sec average (µg/m3)        | average over 10s of particles mass concentration (µg/m3) whose size is < 10μm1                 |
-| 62-63 (0x3E - 0x3F) | PM1 1 min average (Nb/L)           | average over 1 min of particles quantity per liter whose size is < 1μm                         |
-| 64-65 (0x40 - 0x41) | PM2.5 1 min average (Nb/L)         | average over 1 min of particles quantity per liter whose size is < 2.5μm                       |
-| 66-67 (0x42 - 0x43) | PM10 1 min average (Nb/L)          | average over 1 min of particles quantity per liter whose size is < 10μm                        |
-| 68-69 (0x44 - 0x45) | PM1 1 min average (µg/m3)          | average over 1 min of particles mass concentration (µg/m3) whose size is < 1μm1                |
-| 70-71 (0x46 - 0x47) | PM2.5 1 min average (µg/m3)        | average over 1 min of particles mass concentration (µg/m3) whose size is < 2.5μm1              |
-| 72-73 (0x48 - 0x49) | PM10 1 min average (µg/m3)         | average over 1 min of particles mass concentration (µg/m3) whose size is < 10μm1               |
-| 74-75 (0x4A - 0x4B) | PM1 15 min average (Nb/L)          | average over 15 min of particles quantity per liter whose size is < 1μm                        |
-| 76-77 (0x4C - 0x4D) | PM2.5 15 min average (Nb/L)        | average over 15 min of particles quantity per liter whose size is < 2.5μm                      |
-| 78-79 (0x4E - 0x4F) | PM10 15 min average (Nb/L)         | average over 15 min of particles quantity per liter whose size is < 10μm                       |
-| 80-81 (0x50 - 0x51) | PM1 15 min average (µg/m3)         | average over 15 min of particles mass concentration (µg/m3) whose size is < 1μm1               |
-| 82-83 (0x52 - 0x53) | PM2.5 15 min average (µg/m3)       | average over 15 min of particles mass concentration (µg/m3) whose size is < 2.5μm1             |
-| 84-85 (0x54 - 0x55) | PM10 15 min average (µg/m3)        | average over 15 min of particles mass concentration (µg/m3) whose size is < 10μm1              |
-| 106 (0x6A)          | Relative humidity (internal)       | Relative humidity in % (to be multiplied by 100)                                               |
-| 107 (0x6B)          | Temperature (internal)             | Temperature in °C (to be multiplied by 100)                                                    |
-| 199 (0xC7)          | Sleep mode                         | Sleep mode (0 ePMDuct awake, 1 ePMDuct sleeping)                                               |
-| 200 (0xC8)          | Measuring period                   | Measuring time with the NextPM (in sec) by cycles of 15 minutes. Cycle time cannot be modified |
-| 201-202 (0xC9-0xCA) | Total time ON (Sec)                | Total functioning time of the sensor and the pump in the device2                               |
+<table data-header-hidden><thead><tr><th width="196"></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Registers</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td>01 (0x01)</td><td>ePMDuct Firmware</td><td>Firmware number ePMDuct</td></tr><tr><td>02 (0x02)</td><td>Timestamp ePMDuct</td><td>Time on (min) Reset each time tuned off/on</td></tr><tr><td>03 (0x03)</td><td>Status Error ePMDuct</td><td>ePMDuct error code</td></tr><tr><td>18 (0x12)</td><td>NextPM Adv Firmware</td><td>Firmware number NextPM Adv</td></tr><tr><td>19 (0x13)</td><td>Status Error NextPM Adv</td><td>NextPM Adv error code</td></tr><tr><td>20-21 (0x14 - 0x15)</td><td>Number of 0.3µm to 0.5µm on 10 sec</td><td>Number of particles from 0.3µm to 0.5µm (Nb/L) with running average on 10 sec</td></tr><tr><td>22-23 (0x16 - 0x17)</td><td>Number of 0.5µm to 1µm on 10 sec</td><td>Number of particles from 0.5µm to 1µm (Nb/L) with running average on 10 sec</td></tr><tr><td>24-25 (0x18 - 0x19)</td><td>Number of 1µm to 2.5µm on 10 sec</td><td>Number of particles from 1µm to 2.5µm (Nb/L) with running average on 10 sec</td></tr><tr><td>26-27 (0x1A - 0x1B)</td><td>Number of 2.5µm to 5µm on 10 sec</td><td>Number of particles from 2.5µm to 5µm (Nb/L) with running average on 10 sec</td></tr><tr><td>28-29 (0x1C - 0x1D)</td><td>Number of 5µm to 10µm on 10 sec</td><td>Number of particles from 5µm to 10µm (Nb/L) with running average on 10 sec</td></tr><tr><td>30-31 (0x1E - 0x1F)</td><td>Number of 0.3µm to 0.5µm on 1 min</td><td>Number of particles from 0.3µm to 0.5µm (Nb/L) with running average on 1 min</td></tr><tr><td>32-33 (0x20 - 0x21)</td><td>Number of 0.5µm to 1µm on 1 min</td><td>Number of particles from 0.5µm to 1µm (Nb/L) with running average on 1 min</td></tr><tr><td>34-35 (0x22 - 0x23)</td><td>Number of 1µm to 2.5µm on 1 min</td><td>Number of particles from 1µm to 2.5µm (Nb/L) with running average on 1 min</td></tr><tr><td>36-37 (0x24 - 0x25)</td><td>Number of 2.5µm to 5µm on 1 min</td><td>Number of particles from 2.5µm to 5µm (Nb/L) with running average on 1 min</td></tr><tr><td>38-39 (0x26 - 0x27)</td><td>Number of 5µm to 10µm on 1 min</td><td>Number of particles from 5µm to 10µm (Nb/L) with running average on 1 min</td></tr><tr><td>40-41 (0x28 - 0x29)</td><td>Number of 0.3µm to 0.5µm on 15 min</td><td>Number of particles from 0.3µm to 0.5µm (Nb/L) with running average on 15 min</td></tr><tr><td>42-43 (0x2A - 0x2B)</td><td>Number of 0.5µm to 1µm on 15 min</td><td>Number of particles from 0.5µm to 1µm (Nb/L) with running average on 15 min</td></tr><tr><td>44-45 (0x2C - 0x2D)</td><td>Number of 1µm to 2.5µm on 15 min</td><td>Number of particles from 1µm to 2.5µm (Nb/L) with running average on 15 min</td></tr><tr><td>46-47 (0x2E - 0x2F)</td><td>Number of 2.5µm to 5µm on 15 min</td><td>Number of particles from 2.5µm to 5µm (Nb/L) with running average on 15 min</td></tr><tr><td>48-49 (0x30 - 0x31)</td><td>Number of 5µm to 10µm on 15 min</td><td>Number of particles from 5µm to 10µm (Nb/L) with running average on 15 min</td></tr><tr><td>50-51 (0x32 - 0x33)</td><td>PM1 10 sec average (Nb/L)</td><td>average over 10s of particles quantity per liter whose size is &#x3C; 1μm</td></tr><tr><td>52-53 (0x34 - 0x35)</td><td>PM2.5 10 sec average (Nb/L)</td><td>average over 10s of particles quantity per liter whose size is &#x3C; 2.5μm</td></tr><tr><td>54-55 (0x36 - 0x37)</td><td>PM10 10 sec average (Nb/L)</td><td>average over 10s of particles quantity per liter whose size is &#x3C; 10μm</td></tr><tr><td>56-57 (0x38 - 0x39)</td><td>PM1 10 sec average (µg/m3)</td><td>average over 10s of particles mass concentration (µg/m3) whose size is &#x3C; 1μm1</td></tr><tr><td>58-59 (0x3A - 0x3B)</td><td>PM2.5 10 sec average (µg/m3)</td><td>average over 10s of particles mass concentration (µg/m3) whose size is &#x3C; 2.5μm1</td></tr><tr><td>60-61 (0x3C - 0x3D)</td><td>PM10 10 sec average (µg/m3)</td><td>average over 10s of particles mass concentration (µg/m3) whose size is &#x3C; 10μm1</td></tr><tr><td>62-63 (0x3E - 0x3F)</td><td>PM1 1 min average (Nb/L)</td><td>average over 1 min of particles quantity per liter whose size is &#x3C; 1μm</td></tr><tr><td>64-65 (0x40 - 0x41)</td><td>PM2.5 1 min average (Nb/L)</td><td>average over 1 min of particles quantity per liter whose size is &#x3C; 2.5μm</td></tr><tr><td>66-67 (0x42 - 0x43)</td><td>PM10 1 min average (Nb/L)</td><td>average over 1 min of particles quantity per liter whose size is &#x3C; 10μm</td></tr><tr><td>68-69 (0x44 - 0x45)</td><td>PM1 1 min average (µg/m3)</td><td>average over 1 min of particles mass concentration (µg/m3) whose size is &#x3C; 1μm1</td></tr><tr><td>70-71 (0x46 - 0x47)</td><td>PM2.5 1 min average (µg/m3)</td><td>average over 1 min of particles mass concentration (µg/m3) whose size is &#x3C; 2.5μm1</td></tr><tr><td>72-73 (0x48 - 0x49)</td><td>PM10 1 min average (µg/m3)</td><td>average over 1 min of particles mass concentration (µg/m3) whose size is &#x3C; 10μm1</td></tr><tr><td>74-75 (0x4A - 0x4B)</td><td>PM1 15 min average (Nb/L)</td><td>average over 15 min of particles quantity per liter whose size is &#x3C; 1μm</td></tr><tr><td>76-77 (0x4C - 0x4D)</td><td>PM2.5 15 min average (Nb/L)</td><td>average over 15 min of particles quantity per liter whose size is &#x3C; 2.5μm</td></tr><tr><td>78-79 (0x4E - 0x4F)</td><td>PM10 15 min average (Nb/L)</td><td>average over 15 min of particles quantity per liter whose size is &#x3C; 10μm</td></tr><tr><td>80-81 (0x50 - 0x51)</td><td>PM1 15 min average (µg/m3)</td><td>average over 15 min of particles mass concentration (µg/m3) whose size is &#x3C; 1μm1</td></tr><tr><td>82-83 (0x52 - 0x53)</td><td>PM2.5 15 min average (µg/m3)</td><td>average over 15 min of particles mass concentration (µg/m3) whose size is &#x3C; 2.5μm1</td></tr><tr><td>84-85 (0x54 - 0x55)</td><td>PM10 15 min average (µg/m3)</td><td>average over 15 min of particles mass concentration (µg/m3) whose size is &#x3C; 10μm1</td></tr><tr><td>106 (0x6A)</td><td>Relative humidity (internal)</td><td>Relative humidity in % (to be multiplied by 100)</td></tr><tr><td>107 (0x6B)</td><td>Temperature (internal)</td><td>Temperature in °C (to be multiplied by 100)</td></tr><tr><td>199 (0xC7)</td><td>Sleep mode</td><td>Sleep mode (0 ePMDuct awake, 1 ePMDuct sleeping)</td></tr><tr><td>200 (0xC8)</td><td>Measuring period</td><td>Measuring time with the NextPM (in sec) by cycles of 15 minutes. Cycle time cannot be modified</td></tr><tr><td>201-202 (0xC9-0xCA)</td><td>Total time ON (Sec)</td><td>Total functioning time of the sensor and the pump in the device2</td></tr></tbody></table>
 
 1: Mass concentration should be divided by 1000 to get the value in µg/m3
 
 2: Value reset automatically when a new sensor NextPM is replaced inside the ePMDuct.
 
-### Measurement decoding example
+### 4.2 Measurement decoding example
 
 Frame reading for registers **20-21** (0x14-0x15):
 
@@ -175,7 +122,7 @@ The final value (in Hex): `0x00 0x05 0x02 0x3E`
 
 Conversion in decimal: **328 254** (Number of particles per liter of air with a diameter between 0.3 et 0.5 µm)
 
-### Modbus write command (0x10)
+### 4.3 Modbus write command (0x10)
 
 | 199 (0xC7) | Sleep mode function | Register to control sleep mode of the ePMDuct (description below)                              |
 | ---------- | ------------------- | ---------------------------------------------------------------------------------------------- |
@@ -197,11 +144,13 @@ The target value must be between **90** and **900** (seconds), representing a cy
 
 This value is stored in **flash memory**; therefore, avoid writing this value repeatedly to prevent compromising flash integrity. The value is saved and retrieved upon ePMDuct startup (it remains in flash memory even in the event of a power failure).
 
-### Communication parameters
+### 4.4 Communication parameters
 
 Communication parameters (baud rate, address, parity, stop) can be modified directly via the **switches** on the instrument’s electronic board. The low and high states are indicated directly on each switch.
 
 The PCB is represented below.
+
+<figure><img src="../.gitbook/assets/Capture d&#x27;écran 2026-08-05 142036.png" alt=""><figcaption></figcaption></figure>
 
 Figure 2: PCB description, left side for top face, right side for bottom face.
 
@@ -274,7 +223,7 @@ Figure 2: PCB description, left side for top face, right side for bottom face.
 | 30               | 1         | 1         | 1         | 1         | 0         |
 | 31               | 1         | 1         | 1         | 1         | 1         |
 
-### NextPM Error Code Description
+### 4.5 NextPM Error Code Description
 
 The NextPM performs continuous internal diagnostics to keep the user informed of the sensor's status and the validity of the measurements. The status is encoded on 2 bytes and contains flags corresponding to potential errors:
 
@@ -297,7 +246,7 @@ The NextPM performs continuous internal diagnostics to keep the user informed of
 
 **Bit 2 (Not Ready):** Activated upon power-up or when waking from sleep mode. This indicates the sensor is starting up and measurements are unreliable until the bit is deactivated (duration: approx. 15 seconds).
 
-### ePMDuct Error Code Description
+### 4.6 ePMDuct Error Code Description
 
 | Bit 7 | Bit 6 | Bit 5 | Bit 4 | Bit 3 | Bit 2 | Bit 1              | Bit 0               |
 | ----- | ----- | ----- | ----- | ----- | ----- | ------------------ | ------------------- |
@@ -312,9 +261,11 @@ The NextPM performs continuous internal diagnostics to keep the user informed of
 
 * If non-zero, the NextPM error code is non-zero (presence of a sensor-level error).
 
-## Mechanical integration
+## 5. Mechanical integration
 
 The ePMDuct is mounted onto a Duct using its quarter-turn fixing plate. The male part of the plate is already screwed onto the ePMDuct. The female part is screwed onto the Duct. The two parts are then locked together with a quarter-turn mechanism.
+
+<figure><img src="../.gitbook/assets/Capture d&#x27;écran 2026-08-05 142309.png" alt=""><figcaption></figcaption></figure>
 
 Figure 3: Mounting description of the ePMDuct
 
@@ -322,49 +273,26 @@ The orientation of the NextPM sensor is important; therefore, the ePMDuct must b
 
 Be careful, depending on the duct diameter, you have the possibility to select between 2 probes sizes of 20 or 40 cm length. Note that the sampling recommendation is to place the probe end the closest possible to the duct center (a tolerance of 20 % can be acceptable). So the probe end has to be placed at min 30% length of the tube from the sides.
 
-{% stepper %}
-{% step %}
-## Determine the installation area
-{% endstep %}
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-{% step %}
-## Drill the conduit
+To install the ePMDuct on a duct, the following steps must be followed:
 
-Drill a 14mm diameter hole in the conduit.
-{% endstep %}
+* Determine the installation area.
+* Drill a 14mm diameter hole in the conduit.
+* Position the mounting plate centered over the previously drilled hole.
+* Screw the mounting plate in place using two self-drilling screws (Stainless steel self drilling 3.9mm with length depending on tubing).
+* Insert the PM duct  into the tapping hole.
+* Lock the PM duct onto the sheath with a quarter turn.
 
-{% step %}
-## Position the mounting plate
-
-Position the female mounting plate centered over the previously drilled hole.
-{% endstep %}
-
-{% step %}
-## Screw the mounting plate in place
-
-Use two self-drilling screws (Stainless steel self drilling 3.9mm with length depending on tubing).
-{% endstep %}
-
-{% step %}
-## Insert the PM duct
-
-Insert the PM duct into the tapping hole.
-{% endstep %}
-
-{% step %}
-## Lock the PM duct
-
-Lock the PM duct onto the sheath with a quarter turn.
-{% endstep %}
-{% endstepper %}
+<figure><img src="../.gitbook/assets/Capture d&#x27;écran 2026-08-05 142843.png" alt=""><figcaption></figcaption></figure>
 
 Figure 4: Mounting Plate Mechanical specifications
 
-## Cleaning and Maintenance protocol
+## 6. Cleaning and Maintenance protocol
 
 The ePMDuct is designed for long-term industrial use with minimal maintenance. However, to ensure optimal measurement accuracy, the following procedures are recommended periodically.
 
-### Routine Cleaning
+### 6.1 Routine Cleaning
 
 In high-dust environments (HVAC ducts, industrial workshops), the sampling probe and the internal sensor intake may accumulate particles over time.
 
@@ -375,9 +303,11 @@ In high-dust environments (HVAC ducts, industrial workshops), the sampling probe
   * Apply a thin bottle brush to remove dust accumulated on the inox probe sides **from the inside towards the outside**.
   * Use dry, compressed air (canned air) to gently blow out any dust **from the inside towards the outside.**
 
-### Replacement of the NextPM Advanced Sensor
+### 6.2 Replacement of the NextPM Advanced Sensor
 
 The ePMDuct uses a **NextPM Advanced** sensor module coupled with a brushless pump with a filter in between. This module is a consumable with a typical lifespan of over 10,000 hours in continuous operation (depending on environmental conditions). A replacement kit can be purchased to replace old parts by new ones and continue in duct PM monitoring.
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Figure 5: Maintenance guidance for ePMDuct
 
@@ -387,6 +317,9 @@ When the sensor reaches its end of life (Total Time ON (sec)>36 000 000) or if a
 * **Open the Housing: Unscrew the four cover screws to access the internal components (Blue marks on picture above)**
 * **Sensor Replacement:**
   * Unplug the sensor's ribbon cable from the main PCB.
+  *
+
+      <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Figure 6 : ePMDuct inside connections for maintenance
 
@@ -405,7 +338,7 @@ Figure 6 : ePMDuct inside connections for maintenance
   * Close the cover and tighten the 4 screws to ensure the IP seal.
 * **Verification: Power the unit on. Verify that the pump is running and check the Modbus registers to ensure no "Flow Error" or "Hardware Error" flags are active.**
 
-### Flow Rate Testing and Adjustment
+### 6.3 Flow Rate Testing and Adjustment
 
 The ePMDuct is factory-set to its nominal flow rate. Over time, or after replacing internal components (pump, filter, or sensor), it may be necessary to verify and recalibrate this flow to ensure measurement consistency.
 
@@ -415,37 +348,14 @@ This adjustment should only be performed by qualified personnel using a calibrat
 
 Procedure for Flow Adjustment:
 
-{% stepper %}
-{% step %}
-## Setup
-
-Connect your mass flow meter in series with the ePMDuct sampling probe. Ensure all connections are perfectly airtight.
-{% endstep %}
-
-{% step %}
-## Check the flow rate
-
-Nominal flow rate should be between 2.4 and 2.6 L/min.
-{% endstep %}
-{% endstepper %}
+1. Setup: Connect your mass flow meter in series with the ePMDuct sampling probe. Ensure all connections are perfectly airtight.
+2. Check the flow rate. Nominal flow rate should be between 2.4 and 2.6 L/min.
 
 If not in the range, please follow the procedure below:
 
-{% stepper %}
-{% step %}
-## Access the PCB
-
-Open the housing (4 screws with blue marks on picture above) while the device is powered on.
-{% endstep %}
-
-{% step %}
-## Stability
-
-Allow the pump to run for at least 20 seconds to stabilize the internal temperature and airflow if needed modify the measuring time to continuous measurements.
-{% endstep %}
-
-{% step %}
-## Adjustment
+1. Access the PCB: Open the housing (4 screws with blue marks on picture above) while the device is powered on.
+2. Stability: Allow the pump to run for at least 20 seconds to stabilize the internal temperature and airflow if needed modify the measuring time to continuous measurements.
+3. Adjustment
 
 * Locate the flow adjustment potentiometer on the main PCB (refer to the PCB layout in Section 4.4).
 * Using a small flat-head screwdriver, gently turn the potentiometer:
@@ -453,16 +363,12 @@ Allow the pump to run for at least 20 seconds to stabilize the internal temperat
   * Counter-clockwise: To decrease the pump speed and flow rate.
 * Make small, incremental turns and wait a few seconds for the flow meter to stabilize after each adjustment.
 
-Be careful here, the flowrate at the NextPM Advanced inlet will not be the same as the ePMDuct because of airtightness. Check the flow at the NextPM Advanced inlet before moving the potentiometer, and then slowly turn the potentiometer to increase or decrease the flowrate. Be careful, the sensitivity on potentiometer is high.
-{% endstep %}
+_Be careful here, the flowrate at the NextPM Advanced inlet will not be the same as the ePMDuct because of airtightness. Check the flow at the NextPM Advanced inlet before moving the potentiometer, and then slowly turn the potentiometer to increase or decrease the flowrate. Be careful, the sensitivity on potentiometer is high._
 
-{% step %}
-## Validation
-
-Once the target flow rate is reached and stable, close back the housing, be careful to properly connect the stainless steel probe with the NextPM Adv inlet using the antistatic tubing (see picture below) and tighten the screws to maintain the IP rating. Please check again the flow rate once the device re-assembled.
+4. Validation Once the target flow rate is reached and stable, close back the housing, be careful to properly connect the stainless steel probe with the NextPM Adv inlet using the antistatic tubing (see picture below) and tighten the screws to maintain the IP rating. Please check again the flow rate once the device re-assembled.
 
 The target flowrate is between 2.4 and 2.6 L/min.
-{% endstep %}
-{% endstepper %}
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 Figure 7 : Instruction of connection between Probe and NextPM Advanced inlet during the maintenance ePMDuct closing.

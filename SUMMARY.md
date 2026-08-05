@@ -42,4 +42,4 @@
   * [WebApp](pmscan/webapp.md)
   * [Mobile Apps](pmscan/mobile-apps.md)
 * [PMDUCT](pmduct/README.md)
-  * [Userguide PMDuct EN](pmduct/userguide-pmduct-en.md)
+  * [ePMDuct User Guide](pmduct/epmduct-user-guide.md)
