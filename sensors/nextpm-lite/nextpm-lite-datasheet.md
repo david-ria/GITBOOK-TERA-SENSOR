@@ -1,6 +1,24 @@
 ---
 description: FOR INDOOR - NEXT GENERATION PARTICULATE MATTER OEM SENSOR PM 10, PM 2.5, PM 1
 icon: newspaper
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # NextPM Lite datasheet
