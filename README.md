@@ -2,6 +2,7 @@
 icon: hand-wave
 cover: .gitbook/assets/ts.jpg
 coverY: 0
+description: Technical documentation for TERA Sensor products — datasheets, user guides, communication protocols, software and 3D/STEP files for NextPM, NextPM Advanced, Sensor SafyrOPC, SafyrOPC, PMSCAN and PMDuct.
 layout:
   width: default
   cover:
