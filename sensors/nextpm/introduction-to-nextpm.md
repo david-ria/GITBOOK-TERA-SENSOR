@@ -234,7 +234,7 @@ Field evaluation highlights:
 
 <figure><img src="../../.gitbook/assets/Capture d&#x27;écran 2025-03-22 102856.png" alt=""><figcaption></figcaption></figure>
 
-[Read the full report](https://tera-sensor.com/wp-content/uploads/2023/09/tera-sensor-nextpm-field-evaluation_compressed.pdf)
+[Read the full report](https://tera-sensor.com/wp-content/uploads/2025/08/tera-sensor-nextpm-field-evaluation.pdf)
 
 
 
@@ -252,14 +252,14 @@ Results : the NextPM correlation coefficient with the certified analyzer for PM1
 
 <figure><img src="../../.gitbook/assets/Capture d&#x27;écran 2025-03-22 102929.png" alt=""><figcaption></figcaption></figure>
 
-[Read the full report](https://tera-sensor.com/wp-content/uploads/2023/09/In_Field_study_of_NextPM_sensor_rev2_v1.pdf)
+[Read the full report](https://tera-sensor.com/wp-content/uploads/2025/08/In_Field_study_of_NextPM_sensor_rev2_v1.pdf)
 
 Contacts
 
 <figure><img src="../../.gitbook/assets/Capture d&#x27;écran 2025-03-22 103000.png" alt=""><figcaption></figcaption></figure>
 
 | **Groupe sales Director**      | **CTO**                       | **International Sales Manager** |
-| ------------------------------ | ----------------------------- | ------------------------------- |
+| ------------------------------ | ----------------------------- | -------------------------------- |
 | laurent.debard@groupe-tera.com | antoine.dumas@groupe-tera.com | david.riallant@groupe-tera.com  |
 | +33 6 25 45 75 04              | +33 6 85 53 95 25             | +33 6 43 11 36 52               |
 
