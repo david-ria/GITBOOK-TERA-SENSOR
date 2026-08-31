@@ -12,11 +12,10 @@ icon: newspaper
 
 **TECHNICAL SPECIFICATIONS**
 
-| **Count channels**                                              | 0.5 to 2.5µm                                                                                                                             |
+| **Count channels**                                              | Channel 1: pcs >0.3 μm / Channel 2: pcs >0.5 μm / Channel 3: pcs >1.0 μm / Channel 4: pcs >2.5 μm / Channel 5: pcs >5.0 μm                |
 | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| **Smallest channel measured by SafyrOPC Sensor**                | 0.3 µm                                                                                                                                   |
 | **Limit concentration**                                         | 8500 000 part/ft3                                                                                                                        |
-| **Direct debit:**                                               | 2.83 l/min (0.1 cfm)                                                                                                                     |
+| **Sampling flow**                                                | 2.83 l/min (0.1 cfm)                                                                                                                     |
 | **Sampling flow error**                                         | +/- 10%                                                                                                                                  |
 | **High efficiency filtration at discharge:**                    | patented                                                                                                                                 |
 | **Accelerometer**                                               | Yes                                                                                                                                      |
@@ -29,10 +28,10 @@ icon: newspaper
 | **Power**                                                       | On batteries or mains 5VDC - 1A                                                                                                          |
 | **Energy Block SB Model:**                                      | Autonomy (O mains): 12h - LiPo battery 3.7V 4.5Ah                                                                                        |
 | **Energy Block Model AB168**                                    | Autonomy (O mains): 168h - 3.7V 18Ah LiPo battery                                                                                        |
-| **Communication**                                               | Propriate LoRa                                                                                                                           |
-| **Frequency range**                                             | 869.5 MHz / 2.4 GHz                                                                                                                      |
+| **Communication**                                               | Proprietary LoRa (measurement) + BLE (configuration, via nRF Connect app)                                                                |
+| **Frequency range**                                             | 869.5 MHz (LoRa) / 2.4 GHz (BLE)                                                                                                          |
 | **Number of channels available (1 receiver per ID)**            | 5                                                                                                                                        |
-| **Propriate LoRa (869,5 MHz)**                                  | <400m free field /5.50m indoor                                                                                                           |
+| **Proprietary LoRa range (869.5 MHz)**                          | <400m in open field, <5.50m indoors                                                                                                      |
 | **Decontamination**                                             | Materials compatible with surface disinfectants by wiping. Resistant to H2O type airborne                                                |
 | **Environmental conditions of use**                             | Temperature: 5-35°C/Humidity: 0-70% (Not condensed)                                                                                      |
 | **Size**                                                        | Height: 147 mm / Diameter: 103mm                                                                                                         |
