@@ -41,5 +41,5 @@
   * [PMSCAN datasheet](pmscan/pmscan-datasheet.md)
   * [WebApp](pmscan/webapp.md)
   * [Mobile Apps](pmscan/mobile-apps.md)
-* [PMDUCT](pmduct/README.md)
+* [PMDuct](pmduct/README.md)
   * [ePMDuct User Guide](pmduct/epmduct-user-guide.md)
