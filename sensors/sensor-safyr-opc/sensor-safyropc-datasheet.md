@@ -23,6 +23,10 @@ layout:
     visible: true
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/sensor-safyropc/datasheet/](https://tera-sensor.com/resources/sensor-safyropc/datasheet/).
+{% endhint %}
+
 # Sensor SafyrOPC datasheet
 
 <figure><img src="../../.gitbook/assets/safyr_cover2.webp" alt=""><figcaption></figcaption></figure>

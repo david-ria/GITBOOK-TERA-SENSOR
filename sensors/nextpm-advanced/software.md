@@ -2,6 +2,10 @@
 icon: windows
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/nextpm-advanced/software/](https://tera-sensor.com/resources/nextpm-advanced/software/).
+{% endhint %}
+
 # Software
 
 This PC software will help you connect NextPM Advanced to your computer

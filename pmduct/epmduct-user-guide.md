@@ -2,6 +2,10 @@
 icon: lightbulb-on
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/pmduct/user-guide/](https://tera-sensor.com/resources/pmduct/user-guide/).
+{% endhint %}
+
 # ePMDuct User Guide
 
 Version 1.3

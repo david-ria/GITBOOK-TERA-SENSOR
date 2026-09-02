@@ -2,6 +2,10 @@
 icon: lightbulb-exclamation-on
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/nextpm/user-guide/](https://tera-sensor.com/resources/nextpm/user-guide/).
+{% endhint %}
+
 # NextPM User Guide
 
 ## 1. About NextPM <a href="#about-nextpm" id="about-nextpm"></a>

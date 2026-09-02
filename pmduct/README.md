@@ -20,6 +20,10 @@ layout:
     visible: true
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/pmduct/](https://tera-sensor.com/resources/pmduct/).
+{% endhint %}
+
 # PMDUCT
 
 <figure><img src="../.gitbook/assets/PROB-ePMDuct.webp" alt="" width="367"><figcaption></figcaption></figure>

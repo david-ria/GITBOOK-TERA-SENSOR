@@ -2,6 +2,10 @@
 icon: lightbulb-exclamation-on
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/sensor-safyropc/user-guide/](https://tera-sensor.com/resources/sensor-safyropc/user-guide/).
+{% endhint %}
+
 # Sensor SafyrOPC User Guide
 
 ## 1. About Sensor SafyrOPC <a href="#id-3xi6axjdh0m0" id="id-3xi6axjdh0m0"></a>

@@ -2,6 +2,10 @@
 icon: windows
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/sensor-safyropc/software/](https://tera-sensor.com/resources/sensor-safyropc/software/).
+{% endhint %}
+
 # Software
 
 This PC software will help you connect Sensor SafyrOPC to your computer

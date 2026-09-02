@@ -3,6 +3,10 @@ description: OPTICAL PARTICAL COUNTER FOR CLEAN ROOM REAL TIME MONITORING
 icon: newspaper
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/safyropc/datasheet/](https://tera-sensor.com/resources/safyropc/datasheet/).
+{% endhint %}
+
 # SafyrOPC Datasheet
 
 <figure><img src="../../.gitbook/assets/safyr-cover.webp" alt=""><figcaption></figcaption></figure>

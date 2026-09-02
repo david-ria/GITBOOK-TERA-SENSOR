@@ -2,6 +2,10 @@
 icon: file-chart-column
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/nextpm/scientific-papers/](https://tera-sensor.com/resources/nextpm/scientific-papers/).
+{% endhint %}
+
 # Scientific papers
 
 Benchmarking Low-Cost Particulate Matter Sensors: Evaluating\

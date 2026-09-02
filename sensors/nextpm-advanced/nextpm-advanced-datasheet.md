@@ -3,6 +3,10 @@ description: NEXT GENERATION PARTICULATE MATTER OEM SENSOR PM₁₀, PM₂.₅, 
 icon: newspaper
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/nextpm-advanced/datasheet/](https://tera-sensor.com/resources/nextpm-advanced/datasheet/).
+{% endhint %}
+
 # NextPM Advanced Datasheet
 
 <figure><img src="../../.gitbook/assets/advanced_cover2.webp" alt=""><figcaption></figcaption></figure>

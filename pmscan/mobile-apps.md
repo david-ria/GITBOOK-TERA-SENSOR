@@ -2,6 +2,10 @@
 icon: uncharted
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/pmscan/mobile-apps/](https://tera-sensor.com/resources/pmscan/mobile-apps/).
+{% endhint %}
+
 # Mobile Apps
 
 Download from your favorite stores the free Android and IOS Apps to connect to your PMSCAN

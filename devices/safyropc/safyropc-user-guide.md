@@ -2,6 +2,10 @@
 icon: lightbulb-exclamation-on
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/safyropc/user-guide/](https://tera-sensor.com/resources/safyropc/user-guide/).
+{% endhint %}
+
 # SafyrOPC User Guide
 
 ## 1. Caution & warranty exceptions <a href="#toc139267566" id="toc139267566"></a>

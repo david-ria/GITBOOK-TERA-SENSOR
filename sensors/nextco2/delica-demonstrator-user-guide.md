@@ -2,6 +2,10 @@
 icon: lightbulb-on
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/nextco2/user-guide/](https://tera-sensor.com/resources/nextco2/user-guide/).
+{% endhint %}
+
 # NextCO2 Demonstrator User Guide
 
 

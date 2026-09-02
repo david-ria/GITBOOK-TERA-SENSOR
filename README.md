@@ -27,6 +27,10 @@ layout:
     visible: true
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/](https://tera-sensor.com/resources/).
+{% endhint %}
+
 # WELCOME
 
 Welcome, you have just reached Tera Sensor's knowledge center.\

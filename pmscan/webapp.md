@@ -2,6 +2,10 @@
 icon: uncharted
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/pmscan/webapp/](https://tera-sensor.com/resources/pmscan/webapp/).
+{% endhint %}
+
 # WebApp
 
 Yan can directly connect your PMSCAN to you r computer without any download.\

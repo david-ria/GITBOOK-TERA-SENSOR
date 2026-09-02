@@ -5,6 +5,10 @@ description: >-
 icon: square-terminal
 ---
 
+{% hint style="info" %}
+**This platform has moved.** The current version of this page is now published at [tera-sensor.com/resources/nextpm/firmware-history/](https://tera-sensor.com/resources/nextpm/firmware-history/).
+{% endhint %}
+
 # Firmware history
 
 
