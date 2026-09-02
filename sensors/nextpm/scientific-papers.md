@@ -24,7 +24,7 @@ Project: Comparative assessment of low-cost PM sensors (NextPM vs OPC-N3) under 
 **DOI / URL**: https://doi.org/10.3390/atmos16020172
 
 This study benchmarked two low-cost particulate matter sensors—the Alphasense OPC-N3 and Tera Sensor's NextPM—through controlled lab experiments (clean air and water aerosols) and a 27-day field deployment in Cienfuegos, Cuba. The aim was to assess their stability, noise, humidity sensitivity, and reliability using raw data only, without post-processing or external calibration.\
-The NextPM sensor demonstrated superior performance with **80% noise reduction** in clean-air tests (PM2.5: 0.3 ± 0.2 µg/m³ vs. OPC-N3: 0.4 ± 0.5 µg/m³) and **fewer outliers** (79 vs. 87 for PM10). In water aerosol tests, it recorded a **max PM10 of 11.3 µg/m³**, compared to **103.3 µg/m³ for the OPC-N3**, showing stronger rejection of liquid aerosols. In the field, NextPM’s PM2.5 average was slightly higher (6.4 µg/m³ vs. 4.5 µg/m³), but with **half the variability for PM10** (standard deviation: 5.6 vs. 12.1 µg/m³), and fewer extreme values, highlighting its **resistance to humidity-induced drift** thanks to its built-in heater
+The NextPM sensor demonstrated superior performance with **80% noise reduction** in clean-air tests (PM₂.₅: 0.3 ± 0.2 µg/m³ vs. OPC-N3: 0.4 ± 0.5 µg/m³) and **fewer outliers** (79 vs. 87 for PM₁₀). In water aerosol tests, it recorded a **max PM₁₀ of 11.3 µg/m³**, compared to **103.3 µg/m³ for the OPC-N3**, showing stronger rejection of liquid aerosols. In the field, NextPM’s PM₂.₅ average was slightly higher (6.4 µg/m³ vs. 4.5 µg/m³), but with **half the variability for PM₁₀** (standard deviation: 5.6 vs. 12.1 µg/m³), and fewer extreme values, highlighting its **resistance to humidity-induced drift** thanks to its built-in heater
 
 {% embed url="https://tera-sensor.com/wp-content/uploads/2025/08/Benchmarking-LowCost-Particulate-Matter-Sensors.pdf" %}
 
@@ -40,7 +40,7 @@ The NextPM sensor demonstrated superior performance with **80% noise reduction**
 **URL (reference page):** https://www.aqmd.gov/aq-spec/sensors\
 **Document Type:** Technical laboratory evaluation report
 
-This study was conducted by the AQ-SPEC lab at South Coast AQMD to evaluate the performance of two NextPM sensors under controlled laboratory conditions for PM2.5 and PM10 measurements, following an initial field test phase. Results show outstanding correlation with reference-grade instruments (R² > 0.99), high and stable precision, 100% data recovery, and strong resistance to temperature and humidity changes, although the sensor consistently underestimates absolute concentrations compared to FEM standards.
+This study was conducted by the AQ-SPEC lab at South Coast AQMD to evaluate the performance of two NextPM sensors under controlled laboratory conditions for PM₂.₅ and PM₁₀ measurements, following an initial field test phase. Results show outstanding correlation with reference-grade instruments (R² > 0.99), high and stable precision, 100% data recovery, and strong resistance to temperature and humidity changes, although the sensor consistently underestimates absolute concentrations compared to FEM standards.
 
 {% embed url="https://tera-sensor.com/wp-content/uploads/2025/08/tera-sensor-next-pm-laboratory-evaluation.pdf" %}
 
@@ -56,7 +56,7 @@ This study was conducted by the AQ-SPEC lab at South Coast AQMD to evaluate the 
 **URL (reference page):** https://www.aqmd.gov/aq-spec/sensors\
 **Document Type:** Field evaluation technical report (preliminary results)
 
-This field evaluation by the South Coast AQMD assessed the performance of three **NextPM** sensors over two months under real ambient conditions at the Rubidoux monitoring station, in comparison with reference-grade instruments such as the GRIMM and Teledyne T640. The **NextPM sensors demonstrated strong to very strong correlations** for PM1.0 and PM2.5 (R² > 0.95 on 24-hour averages), high data recovery (\~96%), and excellent inter-unit consistency, although they **systematically underestimated concentrations**, especially for PM10 where correlation dropped to moderate levels (R² \~ 0.65).
+This field evaluation by the South Coast AQMD assessed the performance of three **NextPM** sensors over two months under real ambient conditions at the Rubidoux monitoring station, in comparison with reference-grade instruments such as the GRIMM and Teledyne T640. The **NextPM sensors demonstrated strong to very strong correlations** for PM₁.0 and PM₂.₅ (R² > 0.95 on 24-hour averages), high data recovery (\~96%), and excellent inter-unit consistency, although they **systematically underestimated concentrations**, especially for PM₁₀ where correlation dropped to moderate levels (R² \~ 0.65).
 
 {% embed url="https://tera-sensor.com/wp-content/uploads/2025/08/tera-sensor-nextpm-field-evaluation.pdf" %}
 
@@ -73,7 +73,7 @@ This field evaluation by the South Coast AQMD assessed the performance of three 
 **Location:** Longchamp Super-site, Marseille, France\
 **Document Type:** Scientific evaluation report (preliminary phase of a one-year field study)
 
-This field study, conducted at the highly instrumented Longchamp "super-site" in Marseille by AtmoSud and Aix-Marseille University, aimed to assess the performance of the **NextPM sensor** under real-world conditions, focusing on its ability to operate accurately across varied humidity, aerosol types, and meteorological scenarios. Results show **very high correlation** with a certified reference instrument for PM1 and PM2.5 (R² up to 0.93 daily, 0.86 hourly), a **100% data recovery rate**, excellent sensor reproducibility, and real-time capabilities nearly matching those of a regulatory analyzer—while **PM10 correlations were lower and more variable**, likely due to particle dynamics and airflow limitations.
+This field study, conducted at the highly instrumented Longchamp "super-site" in Marseille by AtmoSud and Aix-Marseille University, aimed to assess the performance of the **NextPM sensor** under real-world conditions, focusing on its ability to operate accurately across varied humidity, aerosol types, and meteorological scenarios. Results show **very high correlation** with a certified reference instrument for PM₁ and PM₂.₅ (R² up to 0.93 daily, 0.86 hourly), a **100% data recovery rate**, excellent sensor reproducibility, and real-time capabilities nearly matching those of a regulatory analyzer—while **PM₁₀ correlations were lower and more variable**, likely due to particle dynamics and airflow limitations.
 
 {% embed url="https://tera-sensor.com/wp-content/uploads/2025/08/In_Field_study_of_NextPM_sensor_rev2_v1.pdf" %}
 
@@ -109,7 +109,7 @@ This study by Capgemini Engineering explores the use of machine learning (ML) te
 **DOI:** https://doi.org/10.3390/s22145472\
 **Document Type:** Peer-reviewed scientific journal article
 
-As part of a comparative evaluation of 10 portable air quality sensors, the study tested the **PMSCAN device from Tera Sensor**, which integrates the **NextPM** optical sensor, for its ability to measure PM2.5 and PM10 in mobile, urban conditions. The PMSCAN exhibited a **good correlation with reference measurements for PM2.5** (R² up to 0.88), and was praised for its **high measurement resolution and robustness**, although like most sensors in the comparison, it required **post-processing** to correct for environmental influences such as humidity.
+As part of a comparative evaluation of 10 portable air quality sensors, the study tested the **PMSCAN device from Tera Sensor**, which integrates the **NextPM** optical sensor, for its ability to measure PM₂.₅ and PM₁₀ in mobile, urban conditions. The PMSCAN exhibited a **good correlation with reference measurements for PM₂.₅** (R² up to 0.88), and was praised for its **high measurement resolution and robustness**, although like most sensors in the comparison, it required **post-processing** to correct for environmental influences such as humidity.
 
 ***
 

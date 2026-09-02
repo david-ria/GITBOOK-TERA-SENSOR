@@ -28,7 +28,7 @@ icon: square-terminal
 ### Modbus optimization:
 
 * Sleep mode
-* Calibration parameters implemented internally as y=ax+b function to give users the possibility to adjust PM concentration (only available for PM1, PM2.5 and PM10 in µg/m3)
+* Calibration parameters implemented internally as y=ax+b function to give users the possibility to adjust PM concentration (only available for PM₁, PM₂.₅ and PM₁₀ in µg/m³)
 
 
 

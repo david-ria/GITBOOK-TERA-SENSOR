@@ -15,7 +15,7 @@ icon: microscope
 
 NextPM has been designed to comply with the **highest quality standards** for particulate matter monitoring.
 
-With **3 patents** to provide the best quality, size and price compromise, NextPM gives you **real time PM1, PM2.5 and PM10** in numbers or mass.
+With **3 patents** to provide the best quality, size and price compromise, NextPM gives you **real time PM₁, PM₂.₅ and PM₁₀** in numbers or mass.
 
 NextPM is a genuine technical wonder. It integrates more than **20 years of experience** of Groupe TERA in the field of air quality measurement.
 
@@ -27,7 +27,7 @@ To ensure the performance of our sensors, **strict quality controls** are carrie
 
 ## 2. Difference between number and mass concentration
 
-The particles with the greatest impact on health are the finest (< 1 µm) because they penetrate more deeply into the respiratory system and are measured by PM1.
+The particles with the greatest impact on health are the finest (< 1 µm) because they penetrate more deeply into the respiratory system and are measured by PM₁.
 
 However, if we compare the number and mass distributions for dust, we can see that these particles are in the majority in terms of number (> 80%), even though in terms of mass they represent less than 5%.
 
@@ -67,7 +67,7 @@ Because Mie theory can introduce detection errors with a single angle, NextPM in
 
 <figure><img src="../../.gitbook/assets/9 (1).png" alt=""><figcaption></figcaption></figure>
 
-As a demonstration, these polar plots show the Intensity diffracted function of the detection angles. We see that for particles of 1µm and 2.5 µm, there is little difference at 90°. It is very important to discriminate properly these two sizes as mass concentrations PM1 and PM2.5 are two key measurements.
+As a demonstration, these polar plots show the Intensity diffracted function of the detection angles. We see that for particles of 1µm and 2.5 µm, there is little difference at 90°. It is very important to discriminate properly these two sizes as mass concentrations PM₁ and PM₂.₅ are two key measurements.
 
 <figure><img src="../../.gitbook/assets/Capture d&#x27;écran 2025-03-22 100207.png" alt=""><figcaption></figcaption></figure>
 
@@ -119,7 +119,7 @@ A unique and worldwide patent to keep the humidity inside the sensor under 60% a
 
 To validate the efficiency of the heating device, measurements were done in Brittany. From 18/10/2020 to 09/11/2020, relative humidity alternatively exceeded 60%, to reach a level higher than 80% most of the time.
 
-Under 80% RH, there is little difference between concentrations measured by NextPM (with and without heating) which slightly underestimate the PM2.5/PM10. But as soon as we exceed 80%, the NextPM without heater overestimates the PM2.5/PM10 concentration compared with the reference sensor (Beta Gauge) whereas the heater one stands still against the humidity effect.
+Under 80% RH, there is little difference between concentrations measured by NextPM (with and without heating) which slightly underestimate the PM₂.₅/PM₁₀. But as soon as we exceed 80%, the NextPM without heater overestimates the PM₂.₅/PM₁₀ concentration compared with the reference sensor (Beta Gauge) whereas the heater one stands still against the humidity effect.
 
 <figure><img src="../../.gitbook/assets/Capture d&#x27;écran 2025-03-22 100404.png" alt=""><figcaption></figcaption></figure>
 
@@ -142,13 +142,13 @@ An aeraulic filter at the inlet of the sensor :
 
 <figure><img src="../../.gitbook/assets/Capture d&#x27;écran 2025-03-22 100606.png" alt=""><figcaption></figcaption></figure>
 
-NB : The capacity volume of the dust tray is enough to trap 10 years of continuous measurement at 150 µg/m3 TSP.
+NB : The capacity volume of the dust tray is enough to trap 10 years of continuous measurement at 150 µg/m³ TSP.
 
 
 
 ### **6.1 Laboratory high concentration test results:**
 
-During this test 0,50g of particle mass went through the sensor which corresponds to 2 times the amount of particles that the sensor would be exposed to if placed in Beijing with a PM2.5 Mean of 120 µg/m3.
+During this test 0,50g of particle mass went through the sensor which corresponds to 2 times the amount of particles that the sensor would be exposed to if placed in Beijing with a PM₂.₅ Mean of 120 µg/m³.
 
 Following the test we can see that there is no accumulation in the internal parts of the sensor. The flow is not affected.
 
@@ -160,9 +160,9 @@ The drift measured on the sensor stayed <20%:
 
 | **Parameter** | **Drift** |
 | ------------- | --------- |
-| PM1           | -15%      |
+| PM₁           | -15%      |
 | PM2,5         | -16%      |
-| PM10          | -18%      |
+| PM₁₀          | -18%      |
 | Flow          | -3,5%     |
 
 
@@ -199,7 +199,7 @@ It comprises 4 processes:
 
 Test in our laboratory @Rousset
 
-Verification of calibration parameters for PM2.5 with a polydisperse standard aerosol comprising the size range of 0,1 µm to 10 µm.
+Verification of calibration parameters for PM₂.₅ with a polydisperse standard aerosol comprising the size range of 0,1 µm to 10 µm.
 
 <figure><img src="../../.gitbook/assets/Capture d&#x27;écran 2025-03-22 102642.png" alt=""><figcaption></figcaption></figure>
 
@@ -253,7 +253,7 @@ Context : Daily average of PM 2.5 measurement.
 
 Method : Comparison of the performance of our NextPM with the Reference instrument (certified analyser) for 2 consecutive weeks.
 
-Results : the NextPM correlation coefficient with the certified analyzer for PM1, PM2.5 and as well PM10 is very high > 0.95. It means that the NextPM could be able to measure particles as well as a reference instrument, almost a 1000 times more expensive, for daily use. This first step in the study of NextPM field performances shows that the technology is very reliable and has a high measurement accuracy, near the performances of the certified method in an uncontrolled environment. Also, the technology has almost the same performance for the real time measurement of the three PM fractions, PM1, PM2.5 and PM10.
+Results : the NextPM correlation coefficient with the certified analyzer for PM₁, PM₂.₅ and as well PM₁₀ is very high > 0.95. It means that the NextPM could be able to measure particles as well as a reference instrument, almost a 1000 times more expensive, for daily use. This first step in the study of NextPM field performances shows that the technology is very reliable and has a high measurement accuracy, near the performances of the certified method in an uncontrolled environment. Also, the technology has almost the same performance for the real time measurement of the three PM fractions, PM₁, PM₂.₅ and PM₁₀.
 
 <figure><img src="../../.gitbook/assets/Capture d&#x27;écran 2025-03-22 102929.png" alt=""><figcaption></figcaption></figure>
 
@@ -293,7 +293,7 @@ Baynard, T., R. M. Garland, A. R. Ravishankara, M. A. Tolbert, and E. R. Lovejoy
 Key factors influencing the relative humidity dependence of aerosol light scattering, Geophys. Res. Lett., 33, L06813, doi:[10.1029/2005GL024898](https://doi.org/10.1029/2005GL024898).
 
 Paul M. Cropper , Jaron C. Hansen & Delbert J. Eatough delbert@eatough.net (2013) \
-Measurement of light scattering in an urban area with a nephelometer and PM2.5 FDMS TEOM monitor: Accounting for the effect of water, Journal of the Air & Waste Management Association, 63:9, 1004-1011, DOI: [10.1080/10962247.2013.770421](https://doi.org/10.1080/10962247.2013.770421)
+Measurement of light scattering in an urban area with a nephelometer and PM₂.₅ FDMS TEOM monitor: Accounting for the effect of water, Journal of the Air & Waste Management Association, 63:9, 1004-1011, DOI: [10.1080/10962247.2013.770421](https://doi.org/10.1080/10962247.2013.770421)
 
 Shao, W.; Zhang, H.; Zhou, H.
 
