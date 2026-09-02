@@ -13,7 +13,7 @@ icon: lightbulb-exclamation-on
 
 ### 1.1 Generals <a href="#generals" id="generals"></a>
 
-The NextPM sensor is a particulate matter measurement device which is able to detect PM1, PM2.5 and PM10 in mass concentration (µg/m3) and quantity (Nb/mL). All those data are available within 3 different average periods (10sec, 1 min and 15 min) to best suit the dynamic of the external environment.
+The NextPM sensor is a particulate matter measurement device which is able to detect PM₁, PM₂.₅ and PM₁₀ in mass concentration (µg/m³) and quantity (Nb/mL). All those data are available within 3 different average periods (10sec, 1 min and 15 min) to best suit the dynamic of the external environment.
 
 It is also possible to measure particles classified in 5 different channels (1)(2):
 
@@ -197,9 +197,9 @@ The NextPM information’s reading can be realized through the following command
 | Cmd code | Description                                                                               | Command        |
 | -------- | ----------------------------------------------------------------------------------------- | -------------- |
 | 0x01     | Unique identifi cation number (Id + Batch Number)                                         | 0x81 0x01 0x7E |
-| 0x11     | Concentrations (µg/m3 and Nb/mL) averaged over 10 seconds and updated every 1 second      | 0x81 0x11 0x6E |
-| 0x12     | Concentrations (µg/m3 and Nb/mL) averaged over 1 min and updated every 10 seconds         | 0x81 0x12 0x6D |
-| 0x13     | Concentrations (µg/m3 and Nb/mL) averaged over 15 min and updated every 60 seconds        | 0x81 0x13 0x6C |
+| 0x11     | Concentrations (µg/m³ and Nb/mL) averaged over 10 seconds and updated every 1 second      | 0x81 0x11 0x6E |
+| 0x12     | Concentrations (µg/m³ and Nb/mL) averaged over 1 min and updated every 10 seconds         | 0x81 0x12 0x6D |
+| 0x13     | Concentrations (µg/m³ and Nb/mL) averaged over 15 min and updated every 60 seconds        | 0x81 0x13 0x6C |
 | 0x14     | Temperature (°C) and humidity (%RH)                                                       | 0x81 0x14 0x6B |
 | 0x16     | Sensor state                                                                              | 0x81 0x16 0x69 |
 | 0x17     | Firmware version                                                                          | 0x81 0x17 0x68 |
@@ -214,7 +214,7 @@ The NextPM information’s reading can be realized through the following command
 
 * **2.2.2.1           0x11, 0x12, 0x13 replies**
 
-<table><thead><tr><th>Address</th><th>Cmd code</th><th>State (1 byte)</th><th>PM1 Nb/mL (2 bytes)</th><th>PM2.5 Nb/mL (2 bytes)</th><th>PM10 Nb/mL (2 bytes)</th><th>PM1 µg/m3 (2 bytes)</th><th>PM2.5 µg/m3 (2 bytes)</th><th>PM10 µg/m3 (2 bytes)</th><th width="128">Checksum</th><th></th><th></th><th></th><th><select></select></th></tr></thead><tbody><tr><td>0x81</td><td>0x11</td><td>0x00</td><td>0x022B</td><td>0x06F4</td><td>0x06F4</td><td>0x0A82</td><td>0x1FC6</td><td>0x1FC6</td><td>0xF7</td><td></td><td></td><td></td><td></td></tr><tr><td>0x81</td><td>0x12</td><td>0x00</td><td>0x022B</td><td>0x06F4</td><td>0x06F4</td><td>0x0A82</td><td>0x1FC6</td><td>0x1FC6</td><td>0xF6</td><td></td><td></td><td></td><td></td></tr><tr><td>0x81</td><td>0x13</td><td>0x00</td><td>0x022B</td><td>0x06F4</td><td>0x06F4</td><td>0x0A82</td><td>0x1FC6</td><td>0x1FC6</td><td>0xF5</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th>Address</th><th>Cmd code</th><th>State (1 byte)</th><th>PM₁ Nb/mL (2 bytes)</th><th>PM₂.₅ Nb/mL (2 bytes)</th><th>PM₁₀ Nb/mL (2 bytes)</th><th>PM₁ µg/m³ (2 bytes)</th><th>PM₂.₅ µg/m³ (2 bytes)</th><th>PM₁₀ µg/m³ (2 bytes)</th><th width="128">Checksum</th><th></th><th></th><th></th><th><select></select></th></tr></thead><tbody><tr><td>0x81</td><td>0x11</td><td>0x00</td><td>0x022B</td><td>0x06F4</td><td>0x06F4</td><td>0x0A82</td><td>0x1FC6</td><td>0x1FC6</td><td>0xF7</td><td></td><td></td><td></td><td></td></tr><tr><td>0x81</td><td>0x12</td><td>0x00</td><td>0x022B</td><td>0x06F4</td><td>0x06F4</td><td>0x0A82</td><td>0x1FC6</td><td>0x1FC6</td><td>0xF6</td><td></td><td></td><td></td><td></td></tr><tr><td>0x81</td><td>0x13</td><td>0x00</td><td>0x022B</td><td>0x06F4</td><td>0x06F4</td><td>0x0A82</td><td>0x1FC6</td><td>0x1FC6</td><td>0xF5</td><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
 
 We advise the user to always read the sensor state, it highlights the functional state of the NextPM and allows to know the validity of the measured values.
 
@@ -224,12 +224,12 @@ In this example, the measured concentrations are:
 
 | Description | Data (2 bytes) | Factor | Results |
 | ----------- | -------------- | ------ | ------- |
-| PM1 Nb/mL   | 0x000D         | 1      | 13      |
-| PM2.5 Nb/mL | 0x000E         | 1      | 14      |
-| PM10 Nb/mL  | 0x000F         | 1      | 15      |
-| PM1 µg/m3   | 0x006A         | 0.1    | 10.6    |
-| PM2.5 µg/m3 | 0x0072         | 0.1    | 11.4    |
-| PM10 µg/m3  | 0x0085         | 0.1    | 13.3    |
+| PM₁ Nb/mL   | 0x000D         | 1      | 13      |
+| PM₂.₅ Nb/mL | 0x000E         | 1      | 14      |
+| PM₁₀ Nb/mL  | 0x000F         | 1      | 15      |
+| PM₁ µg/m³   | 0x006A         | 0.1    | 10.6    |
+| PM₂.₅ µg/m³ | 0x0072         | 0.1    | 11.4    |
+| PM₁₀ µg/m³  | 0x0085         | 0.1    | 13.3    |
 
 
 
@@ -382,7 +382,7 @@ All registers are coded on 2 bytes (word) but some data can be coded on 2 or mor
 
 If a data is coded on 4 bytes (2 words, so 2 registers), such as PM measurements, the second word is the most significant one.
 
-Example: 0x01 0x03 0x04 0x4E 0x10 0x00 0x03 0xAC 0xDF, is the reply of PM2.5 measurement value request. The PM2.5 raw value is: (0x4E10) + (0x0003)\*65536 = 216 592. Then, a factor must be applied to get the measurement in the correct unit (see [Readable registers list](nextpm-user-guide.md#readable-registers-list))
+Example: 0x01 0x03 0x04 0x4E 0x10 0x00 0x03 0xAC 0xDF, is the reply of PM₂.₅ measurement value request. The PM₂.₅ raw value is: (0x4E10) + (0x0003)\*65536 = 216 592. Then, a factor must be applied to get the measurement in the correct unit (see [Readable registers list](nextpm-user-guide.md#readable-registers-list))
 
 * 2.3.1.2          Modbus default address
 
@@ -412,7 +412,7 @@ _The following registers are only readable and accessible with a read or read/wr
 | -------------------------------- | ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | 1 (0x01)                         | Firmware version                               | Embedded firmware version                                                                                                  |
 | 19 (0x13)                        | Status                                         | NextPM status (error codes)                                                                                                |
-| 109-110-111 (0x6D - 0x6E - 0x6F) | PM10 clogging                                  | Mass of PM10 cumulated by the sensor (divide by 10 to get the mass in milligrams, the maximum threshold is fixed to 12 mg) |
+| 109-110-111 (0x6D - 0x6E - 0x6F) | PM₁₀ clogging                                  | Mass of PM₁₀ cumulated by the sensor (divide by 10 to get the mass in milligrams, the maximum threshold is fixed to 12 mg) |
 | 20-21 (0x14 - 0x15)              | 0.3µm to 0.5µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 0.3µm and 0.5µm (1)                                 |
 | 22-23 (0x16 - 0x17)              | 0.5µm to 1.0µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 0.5µm to 1.0µm (1)                                  |
 | 24-25 (0x18 - 0x19)              | 1.0µm to 2.5µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 1.0µm to 2.5µm (1)                                  |
@@ -428,24 +428,24 @@ _The following registers are only readable and accessible with a read or read/wr
 | 44-45 (0x2C - 0x2D)              | 1.0µm to 2.5µm quantity (Nb/L) 15 min average  | average over 15min of particles quantity per liter whose size is between 1.0µm to 2.5µm (1)                                |
 | 46-47 (0x2E - 0x2F)              | 2.5µm to 5.0µm quantity (Nb/L) 15 min average  | average over 15min of particles quantity per liter whose size is between 2.5µm to 5.0µm (1)                                |
 | 48-49 (0x30 - 0x31)              | 5.0µm to 10.0µm quantity (Nb/L) 15 min average | average over 15min of particles quantity per liter whose size is between 5.0µm to 10.0µm (1)                               |
-| 50-51 (0x32 - 0x33)              | PM1 10 sec average (Nb/L)                      | average over 10s of particles quantity per liter whose size is < 1μm (1)                                                   |
-| 52-53 (0x34 - 0x35)              | PM2.5 10 sec average (Nb/L)                    | average over 10s of particles quantity per liter whose size is < 2.5μm (1)                                                 |
-| 54-55 (0x36 - 0x37)              | PM10 10 sec average (Nb/L)                     | average over 10s of particles quantity per liter whose size is < 10μm (1)                                                  |
-| 56-57 (0x38 - 0x39)              | PM1 10 sec average (µg/m3)                     | average over 10s of particles mass concentration (µg/m3) whose size is < 1μm (1) (2)                                       |
-| 58-59 (0x3A - 0x3B)              | PM2.5 10 sec average (µg/m3)                   | average over 10s of particles mass concentration (µg/m3) whose size is < 2.5μm (1) (2)                                     |
-| 60-61 (0x3C - 0x3D)              | PM10 10 sec average (µg/m3)                    | average over 10s of particles mass concentration (µg/m3) whose size is < 10μm (1) (2)                                      |
-| 62-63 (0x3E - 0x3F)              | PM1 1 min average (Nb/L)                       | average over 1 min of particles quantity per liter whose size is < 1μm (1)                                                 |
-| 64-65 (0x40 - 0x41)              | PM2.5 1 min average (Nb/L)                     | average over 1 min of particles quantity per liter whose size is < 2.5μm (1)                                               |
-| 66-67 (0x42 - 0x43)              | PM10 1 min average (Nb/L)                      | average over 1 min of particles quantity per liter whose size is < 10μm (1)                                                |
-| 68-69 (0x44 - 0x45)              | PM1 1 min average (µg/m3)                      | average over 1 min of particles mass concentration (µg/m3) whose size is < 1μm (1) (2)                                     |
-| 70-71 (0x46 - 0x47)              | PM2.5 1 min average (µg/m3)                    | average over 1 min of particles mass concentration (µg/m3) whose size is < 2.5μm (1) (2)                                   |
-| 72-73 (0x48 - 0x49)              | PM10 1 min average (µg/m3)                     | average over 1 min of particles mass concentration (µg/m3) whose size is < 10μm (1) (2)                                    |
-| 74-75 (0x4A - 0x4B)              | PM1 15 min average (Nb/L)                      | average over 15 min of particles quantity per liter whose size is < 1μm (1)                                                |
-| 76-77 (0x4C - 0x4D)              | PM2.5 15 min average (Nb/L)                    | average over 15 min of particles quantity per liter whose size is < 2.5μm (1)                                              |
-| 78-79 (0x4E - 0x4F)              | PM10 15 min average (Nb/L)                     | average over 15 min of particles quantity per liter whose size is < 10μm (1)                                               |
-| 80-81 (0x50 - 0x51)              | PM1 15 min average (µg/m3)                     | average over 15 min of particles mass concentration (µg/m3) whose size is < 1μm (1) (2)                                    |
-| 82-83 (0x52 - 0x53)              | PM2.5 15 min average (µg/m3)                   | average over 15 min of particles mass concentration (µg/m3) whose size is < 2.5μm (1) (2)                                  |
-| 84-85 (0x54 - 0x55)              | PM10 15 min average (µg/m3)                    | average over 15 min of particles mass concentration (µg/m3) whose size is < 10μm (1) (2)                                   |
+| 50-51 (0x32 - 0x33)              | PM₁ 10 sec average (Nb/L)                      | average over 10s of particles quantity per liter whose size is < 1μm (1)                                                   |
+| 52-53 (0x34 - 0x35)              | PM₂.₅ 10 sec average (Nb/L)                    | average over 10s of particles quantity per liter whose size is < 2.5μm (1)                                                 |
+| 54-55 (0x36 - 0x37)              | PM₁₀ 10 sec average (Nb/L)                     | average over 10s of particles quantity per liter whose size is < 10μm (1)                                                  |
+| 56-57 (0x38 - 0x39)              | PM₁ 10 sec average (µg/m³)                     | average over 10s of particles mass concentration (µg/m³) whose size is < 1μm (1) (2)                                       |
+| 58-59 (0x3A - 0x3B)              | PM₂.₅ 10 sec average (µg/m³)                   | average over 10s of particles mass concentration (µg/m³) whose size is < 2.5μm (1) (2)                                     |
+| 60-61 (0x3C - 0x3D)              | PM₁₀ 10 sec average (µg/m³)                    | average over 10s of particles mass concentration (µg/m³) whose size is < 10μm (1) (2)                                      |
+| 62-63 (0x3E - 0x3F)              | PM₁ 1 min average (Nb/L)                       | average over 1 min of particles quantity per liter whose size is < 1μm (1)                                                 |
+| 64-65 (0x40 - 0x41)              | PM₂.₅ 1 min average (Nb/L)                     | average over 1 min of particles quantity per liter whose size is < 2.5μm (1)                                               |
+| 66-67 (0x42 - 0x43)              | PM₁₀ 1 min average (Nb/L)                      | average over 1 min of particles quantity per liter whose size is < 10μm (1)                                                |
+| 68-69 (0x44 - 0x45)              | PM₁ 1 min average (µg/m³)                      | average over 1 min of particles mass concentration (µg/m³) whose size is < 1μm (1) (2)                                     |
+| 70-71 (0x46 - 0x47)              | PM₂.₅ 1 min average (µg/m³)                    | average over 1 min of particles mass concentration (µg/m³) whose size is < 2.5μm (1) (2)                                   |
+| 72-73 (0x48 - 0x49)              | PM₁₀ 1 min average (µg/m³)                     | average over 1 min of particles mass concentration (µg/m³) whose size is < 10μm (1) (2)                                    |
+| 74-75 (0x4A - 0x4B)              | PM₁ 15 min average (Nb/L)                      | average over 15 min of particles quantity per liter whose size is < 1μm (1)                                                |
+| 76-77 (0x4C - 0x4D)              | PM₂.₅ 15 min average (Nb/L)                    | average over 15 min of particles quantity per liter whose size is < 2.5μm (1)                                              |
+| 78-79 (0x4E - 0x4F)              | PM₁₀ 15 min average (Nb/L)                     | average over 15 min of particles quantity per liter whose size is < 10μm (1)                                               |
+| 80-81 (0x50 - 0x51)              | PM₁ 15 min average (µg/m³)                     | average over 15 min of particles mass concentration (µg/m³) whose size is < 1μm (1) (2)                                    |
+| 82-83 (0x52 - 0x53)              | PM₂.₅ 15 min average (µg/m³)                   | average over 15 min of particles mass concentration (µg/m³) whose size is < 2.5μm (1) (2)                                  |
+| 84-85 (0x54 - 0x55)              | PM₁₀ 15 min average (µg/m³)                    | average over 15 min of particles mass concentration (µg/m³) whose size is < 10μm (1) (2)                                   |
 | 100 (0x64)                       | Fan command ratio (%)                          | Fan command ratio (%) (to be divided by 100)                                                                               |
 | 101 (0x65)                       | Heater command ratio (%)                       | Heater command ratio (%) (to be divided by 100)                                                                            |
 | 102 (0x66)                       | Fan speed                                      | Fan rotation speed (Hz)                                                                                                    |
@@ -457,22 +457,22 @@ _The following registers are only readable and accessible with a read or read/wr
 | 132-133 (0x84 - 0x85)            | 1.0µm to 2.5µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 1.0µm to 2.5µm (1)                                  |
 | 134-135 (0x86 - 0x87)            | 2.5µm to 5.0µm quantity (Nb/L) 10 sec average  | average over 10s of particles quantity per liter whose size is between 2.5µm to 5.0µm (1)                                  |
 | 136-137 (0x88 - 0x89)            | 5.0µm to 10.0µm quantity (Nb/L) 10 sec average | average over 10s of particles quantity per liter whose size is between 5.0µm to 10.0µm (1)                                 |
-| 138-139 (0x8A - 0x8B)            | TSP (µg/m3) 10 sec average                     | average over 10 sec of Total Suspended Particles (TSP) mass concentration in µg/m3 (5)                                     |
-| 140-141 (0x8C - 0x8D)            | TSP (µg/m3) 1 min average                      | average over 1 min of Total Suspended Particles (TSP) mass concentration in µg/m3 (5)                                      |
-| 142-143 (0x8E - 0x8F)            | TSP (µg/m3) 15 min average                     | average over 15 min Total Suspended Particles (TSP) mass concentration in µg/m3 (5)                                        |
+| 138-139 (0x8A - 0x8B)            | TSP (µg/m³) 10 sec average                     | average over 10 sec of Total Suspended Particles (TSP) mass concentration in µg/m³ (5)                                     |
+| 140-141 (0x8C - 0x8D)            | TSP (µg/m³) 1 min average                      | average over 1 min of Total Suspended Particles (TSP) mass concentration in µg/m³ (5)                                      |
+| 142-143 (0x8E - 0x8F)            | TSP (µg/m³) 15 min average                     | average over 15 min Total Suspended Particles (TSP) mass concentration in µg/m³ (5)                                        |
 | 145 (0x91)                       | External calculated Temperature (°C)           | Temperature in °C (to be multiplied by 100)                                                                                |
 | 146 (0x92)                       | External calculated Relative humidity (%)      | Relative humidity in % (to be multiplied by 100)                                                                           |
 | 147-148 (0x93-0x94)              | Unique Id Sensor number                        | Number usually included between 0 and 2000                                                                                 |
 | 149-150 (0x95-0x96)              | Batch Sensor number                            | Number of the batch to identify the sensor                                                                                 |
-| 151 (0x97)                       | PM1 coefficient (a)(3)                         | Linear regression y=ax+b function applied for PM1                                                                          |
-| 152 (0x98)                       | PM1 offset (b)(4)                              | Linear regression y=ax+b function applied for PM1                                                                          |
-| 153 (0x99)                       | PM2.5 coefficient (a)(3)                       | Linear regression y=ax+b function applied for PM2.5                                                                        |
-| 154 (0x9A)                       | PM2.5 offset (b)(4)                            | Linear regression y=ax+b function applied for PM2.5                                                                        |
-| 155 (0x9B)                       | PM10 coefficient (a)(3)                        | Linear regression y=ax+b function applied for PM10                                                                         |
-| 156 (0x9C)                       | PM10 offset (b)(4)                             | Linear regression y=ax+b function applied for PM10                                                                         |
+| 151 (0x97)                       | PM₁ coefficient (a)(3)                         | Linear regression y=ax+b function applied for PM₁                                                                          |
+| 152 (0x98)                       | PM₁ offset (b)(4)                              | Linear regression y=ax+b function applied for PM₁                                                                          |
+| 153 (0x99)                       | PM₂.₅ coefficient (a)(3)                       | Linear regression y=ax+b function applied for PM₂.₅                                                                        |
+| 154 (0x9A)                       | PM₂.₅ offset (b)(4)                            | Linear regression y=ax+b function applied for PM₂.₅                                                                        |
+| 155 (0x9B)                       | PM₁₀ coefficient (a)(3)                        | Linear regression y=ax+b function applied for PM₁₀                                                                         |
+| 156 (0x9C)                       | PM₁₀ offset (b)(4)                             | Linear regression y=ax+b function applied for PM₁₀                                                                         |
 
 1. See example below explaining how to decode mass and quantity concentration.
-2. _Mass concentration should be divided by 1000 to get the value in µg/m3_
+2. _Mass concentration should be divided by 1000 to get the value in µg/m³_
 3. Slope coefficient initially set to 100 (0x00 0x64) details explained below 2.3.3
 4. Slope coefficient initially set to 10 000 (0x27 0x10) details explained below 2.3.3
 5. TSP are an estimated data extrapolated from lower size particles as NextPM inlet upper size limit is 10µm particles diameter
@@ -481,7 +481,7 @@ _The following registers are only readable and accessible with a read or read/wr
 
 Measurement decoding example :
 
-* PM1, PM2.5 and PM10 concentrations request command: 01 03 00 32 00 24 E4 1E
+* PM₁, PM₂.₅ and PM₁₀ concentrations request command: 01 03 00 32 00 24 E4 1E
 *   Sensor’s reply :
 
     01 03 48 62 4F 00 25 62 4F 00 25 62 4F 00 25 00 EC 00 00 00 EC 00 00 00 EC 00 00 6A 5D 00 13 99 6F 00 14 57 22 00 15 00 5E 00 00 01 82 00 00 03 A8 00 00 00 ED 00 17 CA FA 00 17 FE 29 00 17 00 A7 00 00 01 C8 00 00 02 69 00 00 77 09
@@ -492,7 +492,7 @@ Measurement decoding example :
     * Calculation of the 10s average of the mass concentration of particles whose size is < 1μm :
       * 0x00EC is the less significant word and 0x0000 is the most significant word
       * the concatenate value (raw value) is 0x000000EC which is 236 in decimal
-      * Measured physical value of PM1 is 0.236 µg/m3 , averaged over 10 seconds.
+      * Measured physical value of PM₁ is 0.236 µg/m³ , averaged over 10 seconds.
 
 
 
@@ -508,12 +508,12 @@ _The following registers are writable and accessible with a write or read/write 
 | 103 (0x67) | Laser function                                     | 0: turn off the laser 1: turn on the laser other values (auto regulation of the laser)                                                                                            |
 | 112 (0x70) | Baud rate                                          | Identified code: range is 1 to 8 (2)                                                                                                                                              |
 | 104 (0x68) | Validation Key for writing in registers 105 to 110 | The key value is 0x33 0xAA and cannot be changed                                                                                                                                  |
-| 105 (0x69) | Coefficient for PM1                                | Slope coefficient initially set to 100 (0x 00 0x64) because factor 0.01 is applied to get 2 decimal values                                                                        |
-| 106 (0x6A) | Off set for PM1                                    | Off set coefficient initially set to 10 000 (0x27 0x10) because factor 0.01 is applied first, and -100 is applied secondly                                                        |
-| 107 (0x6B) | Coefficient for PM2.5                              | Slope coefficient initially set to 100 (0x64) because factor 0.01 is applied to get 2 decimal values                                                                              |
-| 108 (0x6C) | Off set for PM1                                    | Off set coefficient initially set to 10 000 (0x27 0x10) because factor 0.01 is applied first, and -100 is applied secondly                                                        |
-| 109 (0x6D) | Coeffi cient for PM10                              | Slope coefficient initially set to 100 (0x64) because factor 0.01 is applied to get 2 decimal values                                                                              |
-| 110 (0x6E) | Off set for PM1                                    | Off set coefficient initially set to 10 000 (0x27 0x10) because factor 0.01 is applied first, and -100 is applied secondly                                                        |
+| 105 (0x69) | Coefficient for PM₁                                | Slope coefficient initially set to 100 (0x 00 0x64) because factor 0.01 is applied to get 2 decimal values                                                                        |
+| 106 (0x6A) | Off set for PM₁                                    | Off set coefficient initially set to 10 000 (0x27 0x10) because factor 0.01 is applied first, and -100 is applied secondly                                                        |
+| 107 (0x6B) | Coefficient for PM₂.₅                              | Slope coefficient initially set to 100 (0x64) because factor 0.01 is applied to get 2 decimal values                                                                              |
+| 108 (0x6C) | Off set for PM₁                                    | Off set coefficient initially set to 10 000 (0x27 0x10) because factor 0.01 is applied first, and -100 is applied secondly                                                        |
+| 109 (0x6D) | Coeffi cient for PM₁₀                              | Slope coefficient initially set to 100 (0x64) because factor 0.01 is applied to get 2 decimal values                                                                              |
+| 110 (0x6E) | Off set for PM₁                                    | Off set coefficient initially set to 10 000 (0x27 0x10) because factor 0.01 is applied first, and -100 is applied secondly                                                        |
 
 1. As it will change the behavior of the sensor and the reliability of the measurements, Tera Sensor does not recommend any change .
 2. The baud rate of the simple and modbus communication can be changed by writing the identifier code corresponding to the desired baud rate value (see table below).
@@ -533,7 +533,7 @@ Special care should be taken when Baud rate is changed, the user should mark or 
 
 About coefficient/off set correction for PM mentioned above at registers 105 to 110. An example of modification is given below, with the explanation of the final coefficient and off set obtained.
 
-Frame example to change coefficient a (at register 105) for PM1 at 1.16 and the off set b (at register 106 at 0.62, but to maintain coefficients and off sets as initial values for PM2.5 and PM10 :&#x20;
+Frame example to change coefficient a (at register 105) for PM₁ at 1.16 and the off set b (at register 106 at 0.62, but to maintain coefficients and off sets as initial values for PM₂.₅ and PM₁₀ :&#x20;
 
 0x01 0x10 0x00 0x68 0x00 0x07 0x0E **0x33 0xAA** 0x00 0x74 **0x27 0x4E** 0x00 0x64 0x27 0x10 **0x00 0x64 0x27 0x10** 0xF9 0x58&#x20;
 
@@ -543,13 +543,13 @@ Frame details and calculation for Coefficients and Off sets&#x20;
 
 **0x33 0xAA** : Key to modify the coefficients and off sets values&#x20;
 
-0x00 0x74 : Coefficient for PM1 at 116 (final value 116/100 = 1.16)&#x20;
+0x00 0x74 : Coefficient for PM₁ at 116 (final value 116/100 = 1.16)&#x20;
 
-**0x27 0x4E** : Off set for PM1 at 10 062 (final value \[10 062/100] -100 = 0.62)&#x20;
+**0x27 0x4E** : Off set for PM₁ at 10 062 (final value \[10 062/100] -100 = 0.62)&#x20;
 
-0x00 0x64 0x27 0x10 : Initial Coefficient and Off set for PM2.5 set as 1 and 0 respectively&#x20;
+0x00 0x64 0x27 0x10 : Initial Coefficient and Off set for PM₂.₅ set as 1 and 0 respectively&#x20;
 
-**0x00 0x64 0x27 0x10** : Initial Coefficient and Off set for PM10 set as 1 and 0 respectively&#x20;
+**0x00 0x64 0x27 0x10** : Initial Coefficient and Off set for PM₁₀ set as 1 and 0 respectively&#x20;
 
 0xF9 0x58 : CRC&#x20;
 
@@ -765,7 +765,7 @@ The NextPM sensor is a good option for autonomous products, but there are condit
 
 The NextPM sensor is equipped with a sleep mode to reduce power consumption, or it is also possible to add a power switch to turn the sensor completely off (depending on the maximum power consumption possible).
 
-After an off/sleep period, the sensor is turned back on, it is needed to wait 15 seconds before the sensor is fully operational (mainly for the fluidic path to become stable after the fan restart) . It is also recommended to wait an additional 20 seconds minimum (1 minute is better) before collecting the data from the 1 minute average command for PM1, PM2.5 and PM10.
+After an off/sleep period, the sensor is turned back on, it is needed to wait 15 seconds before the sensor is fully operational (mainly for the fluidic path to become stable after the fan restart) . It is also recommended to wait an additional 20 seconds minimum (1 minute is better) before collecting the data from the 1 minute average command for PM₁, PM₂.₅ and PM₁₀.
 
 In this case the results obtained will be reliable and can be compared with other instruments if needed.
 
