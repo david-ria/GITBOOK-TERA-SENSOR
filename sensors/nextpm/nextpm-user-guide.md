@@ -1,5 +1,5 @@
 ---
-description: Complete integration guide for NextPM: pinout, UART and Modbus communication, mechanical mounting and sensor behaviour.
+description: "Complete integration guide for NextPM: pinout, UART and Modbus communication, mechanical mounting and sensor behaviour."
 icon: lightbulb-exclamation-on
 ---
 

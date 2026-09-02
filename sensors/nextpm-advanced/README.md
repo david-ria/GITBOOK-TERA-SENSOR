@@ -1,5 +1,5 @@
 ---
-description: NextPM Advanced: the extended-range OEM particulate sensor with TSP and temperature/humidity compensation — datasheet, software and 3D files.
+description: "NextPM Advanced: the extended-range OEM particulate sensor with TSP and temperature/humidity compensation — datasheet, software and 3D files."
 ---
 
 {% hint style="info" %}

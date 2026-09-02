@@ -1,5 +1,5 @@
 ---
-description: SafyrOPC: the standalone, LoRa-connected particle counter for real-time cleanroom monitoring — datasheet, user guide and software.
+description: "SafyrOPC: the standalone, LoRa-connected particle counter for real-time cleanroom monitoring — datasheet, user guide and software."
 ---
 
 {% hint style="info" %}

@@ -1,5 +1,5 @@
 ---
-description: Installation and operating guide for the SafyrOPC cleanroom particle counter: battery, LoRa communication and Modbus protocol.
+description: "Installation and operating guide for the SafyrOPC cleanroom particle counter: battery, LoRa communication and Modbus protocol."
 icon: lightbulb-exclamation-on
 ---
 

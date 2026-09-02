@@ -1,5 +1,5 @@
 ---
-description: Sensor SafyrOPC: the OEM optical particle counter for embedded cleanroom monitoring — datasheet, user guide, software and 3D files.
+description: "Sensor SafyrOPC: the OEM optical particle counter for embedded cleanroom monitoring — datasheet, user guide, software and 3D files."
 ---
 
 {% hint style="info" %}

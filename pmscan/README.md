@@ -1,5 +1,5 @@
 ---
-description: PMSCAN: the portable personal exposure monitor for particulate matter — datasheet, web app and mobile app resources.
+description: "PMSCAN: the portable personal exposure monitor for particulate matter — datasheet, web app and mobile app resources."
 ---
 
 {% hint style="info" %}

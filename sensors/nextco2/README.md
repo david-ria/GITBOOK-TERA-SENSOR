@@ -1,5 +1,5 @@
 ---
-description: NextCO2: the demonstrator platform for CO2 sensing — user guide and software resources.
+description: "NextCO2: the demonstrator platform for CO2 sensing — user guide and software resources."
 ---
 
 {% hint style="info" %}

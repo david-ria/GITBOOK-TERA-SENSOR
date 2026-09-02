@@ -1,5 +1,5 @@
 ---
-description: NextPM: the compact, patented optical PM sensor for indoor air quality — datasheet, user guide, software and calibration resources.
+description: "NextPM: the compact, patented optical PM sensor for indoor air quality — datasheet, user guide, software and calibration resources."
 ---
 
 {% hint style="info" %}

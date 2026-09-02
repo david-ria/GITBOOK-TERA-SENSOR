@@ -1,5 +1,5 @@
 ---
-description: Integration guide for the Sensor SafyrOPC OEM module: electrical connection, UART/Modbus communication and mechanical specifications.
+description: "Integration guide for the Sensor SafyrOPC OEM module: electrical connection, UART/Modbus communication and mechanical specifications."
 icon: lightbulb-exclamation-on
 ---
 
