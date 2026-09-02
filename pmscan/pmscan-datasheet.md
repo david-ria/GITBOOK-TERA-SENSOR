@@ -30,10 +30,10 @@ layout:
 | Designation                     | Values                                                                                                    |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | **GENERAL**                     |                                                                                                           |
-| Measured parameters             | <p>PM1/PM2.5/PM10 in µg/m3</p><p>Temperature in °C</p><p>Relative Humidity in %</p><p>Battery Level</p>   |
+| Measured parameters             | <p>PM₁/PM₂.₅/PM₁₀ in µg/m³</p><p>Temperature in °C</p><p>Relative Humidity in %</p><p>Battery Level</p>   |
 | **PERFORMANCE**                 |                                                                                                           |
-| PM Concentration Range          | 0 - 1000 µg/m3                                                                                            |
-| Particle Size detection range   | 0.3 µm to 10µm                                                                                            |
+| PM Concentration Range          | 0 - 1000 µg/m³                                                                                            |
+| Particle Size detection range   | 0.3 µm to 10 µm                                                                                           |
 | PM Repeatability                | < 3%                                                                                                      |
 | **COMMUNICATION**               |                                                                                                           |
 | Type                            | Low consumption radio communication                                                                       |

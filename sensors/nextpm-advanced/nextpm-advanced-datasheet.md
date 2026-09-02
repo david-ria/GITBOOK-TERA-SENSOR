@@ -1,5 +1,5 @@
 ---
-description: NEXT GENERATION PARTICULATE MATTER OEM SENSOR PM 10, PM 2.5, PM 1
+description: NEXT GENERATION PARTICULATE MATTER OEM SENSOR PM₁₀, PM₂.₅, PM₁
 icon: newspaper
 ---
 
@@ -14,17 +14,17 @@ icon: newspaper
 | **GENERAL**                                                                          |                                                                                             |                                                                                              |
 | Technology                                                                           | Optical                                                                                     | -                                                                                            |
 | Targeted pollutants                                                                  | Particulate Matter                                                                          | -                                                                                            |
-| Outputs                                                                              | <p>PM1</p><p>PM2.5</p><p>PM10</p><p>TSP 1</p><p>Temperature 2</p><p>Relative Humidity 2</p> | <p><em>µg/m3 &#x26; pcs / L</em></p><p><em>µg/m3</em></p><p><em>°C</em></p><p><em>%</em></p> |
-| Airflow 3                                                                            | 1,2                                                                                         | _L/mm_                                                                                       |
+| Outputs                                                                              | <p>PM₁</p><p>PM₂.₅</p><p>PM₁₀</p><p>TSP ¹</p><p>Temperature ²</p><p>Relative Humidity ²</p> | <p><em>µg/m³ &#x26; pcs / L</em></p><p><em>µg/m³ &#x26; pcs / L</em></p><p><em>µg/m³ &#x26; pcs / L</em></p><p><em>µg/m³</em></p><p><em>°C</em></p><p><em>%</em></p> |
+| Airflow ³                                                                            | 1.2                                                                                         | _L/min_                                                                                      |
 | Size (l \* w \* h)                                                                   | Annex 1                                                                                     | _mm / Inches_                                                                                |
 | Lifetime (MTTF)                                                                      | > 10 000                                                                                    | _hours_                                                                                      |
 | **PERFORMANCE**                                                                      |                                                                                             |                                                                                              |
-| Particle Size detection range                                                        | 0,3 - 10                                                                                    | _µm diameter_                                                                                |
+| Particle Size detection range                                                        | 0.3 - 10                                                                                    | _µm diameter_                                                                                |
 | Detection efficiency with 0.3 µm diameter particles                                  | > 50                                                                                        | %                                                                                            |
-| <p>Concentration detection range /</p><p>PM10 - PM2,5 - PM1</p><p>TSP</p>            | <p>0 - 10 000</p><p>0 - 40 000</p>                                                          | _µg/m3 (Arizona dust A1 equivalent)_                                                         |
-| Detection Limit                                                                      | < 1                                                                                         | _µg/m3 (Arizona dust A1 equivalent)_                                                         |
+| <p>Concentration detection range /</p><p>PM₁₀ - PM₂.₅ - PM₁</p><p>TSP</p>            | <p>0 - 10 000</p><p>0 - 40 000</p>                                                          | _µg/m³ (Arizona dust A1 equivalent)_                                                         |
+| Detection Limit                                                                      | < 1                                                                                         | _µg/m³ (Arizona dust A1 equivalent)_                                                         |
 | Linearity error                                                                      | < 5                                                                                         | _%_                                                                                          |
-| Repeatability error 4                                                                | < 3                                                                                         | _%_                                                                                          |
+| Repeatability error ⁴                                                                | < 3                                                                                         | _%_                                                                                          |
 | Refresh rate                                                                         | 1 / 10 / 60                                                                                 | _sec._                                                                                       |
 | Warm-up time                                                                         | 10                                                                                          | _sec._                                                                                       |
 | <p>Temperature influence</p><p>0°C to 30°C</p><p>-20°C to 0°C</p><p>30°C to 70°C</p> | <p>0</p><p>&#x3C; + 1,0</p><p>&#x3C; - 0,8</p>                                              | _%/°C_                                                                                       |
@@ -35,7 +35,7 @@ icon: newspaper
 
 | **COMMUNICATION**       |                                                                                            |                   |
 | ----------------------- | ------------------------------------------------------------------------------------------ | ----------------- |
-| UART / Modbus (RS485) 5 | Download NextPM User Guide for more informations                                           |                   |
+| UART / Modbus (RS485) ⁵ | Download NextPM User Guide for more informations                                           |                   |
 | **OTHER**               |                                                                                            |                   |
 | Operating conditions    | <p>-20 à +70</p><p>253 to 343</p>                                                          | <p>°C</p><p>K</p> |
 | 0 - 95 uncondensed      | %                                                                                          |                   |
@@ -47,15 +47,15 @@ icon: newspaper
 | RoHS compliant          |                                                                                            |                   |
 | Dimensions and weight   | <p>L 62 mm x l 52 mm x H 26.6 mm | 45 g</p><p>L 2,4 / W 2,07 / H 1,02 inches | 1.59 Oz</p> |                   |
 
-_1 Calculated based on other PM detection and validated on field measurements_
+_¹ Calculated based on other PM detection and validated on field measurements._
 
-_2 See NextPM User Guide for more information about these data_
+_² See the NextPM User Guide for more information about these data._
 
-_3 Airflow of 1.2L/min provided by the external pumping system_
+_³ Airflow of 1.2 L/min provided by the external pumping system._
 
-_4 Calculated with the fifteen minutes moving average output_
+_⁴ Calculated on the fifteen-minute moving average output._
 
-_5 The sensor needs a converter for RS485 communication, more information in the UserGuide for NextPM Advanced_
+_⁵ The sensor needs a converter for RS485 communication — see the NextPM Advanced User Guide for more information._
 
 ### Mechanical specifications <a href="#qmie86r37jai" id="qmie86r37jai"></a>
 

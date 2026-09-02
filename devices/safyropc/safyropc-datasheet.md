@@ -14,7 +14,7 @@ icon: newspaper
 
 | **Count channels**                                              | Channel 1: pcs >0.3 μm / Channel 2: pcs >0.5 μm / Channel 3: pcs >1.0 μm / Channel 4: pcs >2.5 μm / Channel 5: pcs >5.0 μm                |
 | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| **Limit concentration**                                         | 8500 000 part/ft3                                                                                                                        |
+| **Limit concentration**                                         | 8 500 000 part/ft³                                                                                                                       |
 | **Sampling flow**                                                | 2.83 l/min (0.1 cfm)                                                                                                                     |
 | **Sampling flow error**                                         | +/- 10%                                                                                                                                  |
 | **High efficiency filtration at discharge:**                    | patented                                                                                                                                 |
