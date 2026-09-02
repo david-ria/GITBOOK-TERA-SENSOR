@@ -1,4 +1,5 @@
 ---
+description: Independent scientific publications benchmarking NextPM's particulate matter measurement performance.
 icon: file-chart-column
 ---
 

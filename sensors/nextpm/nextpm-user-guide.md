@@ -1,4 +1,5 @@
 ---
+description: Complete integration guide for NextPM: pinout, UART and Modbus communication, mechanical mounting and sensor behaviour.
 icon: lightbulb-exclamation-on
 ---
 
@@ -26,9 +27,9 @@ Sensor specifications, such as range, precision, conditions of use, etc.., are d
 
 The “NextPM Innovative Technology” document highlights the performances of the sensor NextPM
 
-The user can find explanations about fluidic and mechanics to be helped for its NextPM use/integration by referring to the NextPM [integration advice](/broken/pages/BVDxpYneBr0jrNA0FSZc) chapter.
+The user can find explanations about fluidic and mechanics to be helped for its NextPM use/integration by referring to the NextPM [integration advice](#id-6.-general-nextpm-integration) chapter.
 
-The user can find [accessories](/broken/pages/BVDxpYneBr0jrNA0FSZc) either to quickly use and test the NextPM sensor but also to make an easier integration.
+The user can find [accessories](#id-9.-accessories) either to quickly use and test the NextPM sensor but also to make an easier integration.
 
 
 
@@ -53,7 +54,7 @@ The user can find [accessories](/broken/pages/BVDxpYneBr0jrNA0FSZc) either to qu
 |   6   |     GND     |
 
 * The NextPM must be power supplied with + 5 VDC / 0.2V.
-* The average current consumption is lower than 70mA but it can go up to 210mA in case of heater activation (manual enable or automatic due to high relative humidity (see [Heater](/broken/pages/BVDxpYneBr0jrNA0FSZc)). The average current consumption can be reduced to 20mA by turning the sensor into [sleep mode](/broken/pages/BVDxpYneBr0jrNA0FSZc).
+* The average current consumption is lower than 70mA but it can go up to 210mA in case of heater activation (manual enable or automatic due to high relative humidity (see [Heater](#heater)). The average current consumption can be reduced to 20mA by turning the sensor into [sleep mode](#sleep-mode).
 * The Tx and Rx signal logical level is TTL (+3.3V) and the Rx signal is +5V tolerant.
 * The signal DE/RE is useful only in case of RS485 half duplex mode use, to drive the external RS485 transceiver, otherwise, it could be left unconnected (high impedance).
 * The ADAM TECH _125CH-B-06_ or MOLEX _51021-0600_ connector can be purchased to connect the NextPM Sensor..\
@@ -69,13 +70,13 @@ The NextPM has the ability to automatically trigger and regulate its internal he
 
 The heater is enabled from 60 %RH threshold and the heat generated is dependent on the measured relative humidity and so, the NextPM current consumption also (the additional current due to the heater can reach 140mA).
 
-The user, for specific purposes, can enable/disable the automatic heater regulation but also set a specific value (see [Writing commands list](https://docs.google.com/document/d/1mDMpD21G-W-E4irnLSpVwDwx0-xLc66_a1_b9S5H0ZM/edit#heading=h.c4r5wogk8vuz) and [Writable registers list](/broken/pages/BVDxpYneBr0jrNA0FSZc)).
+The user, for specific purposes, can enable/disable the automatic heater regulation but also set a specific value (see [Writing commands list](https://docs.google.com/document/d/1mDMpD21G-W-E4irnLSpVwDwx0-xLc66_a1_b9S5H0ZM/edit#heading=h.c4r5wogk8vuz) and [Writable registers list](#writable-registers-list)).
 
 
 
 ### 1.4 Sleep mode <a href="#sleep-mode" id="sleep-mode"></a>
 
-To save the system energy by reducing the average NextPM current consumption, the user can put the NextPM sensor into sleep mode by sending the corresponding command (see [Writing commands list](https://docs.google.com/document/d/1mDMpD21G-W-E4irnLSpVwDwx0-xLc66_a1_b9S5H0ZM/edit#heading=h.c4r5wogk8vuz) and [Writable registers list](/broken/pages/BVDxpYneBr0jrNA0FSZc)). This reduces the current consumption below 20mA.
+To save the system energy by reducing the average NextPM current consumption, the user can put the NextPM sensor into sleep mode by sending the corresponding command (see [Writing commands list](https://docs.google.com/document/d/1mDMpD21G-W-E4irnLSpVwDwx0-xLc66_a1_b9S5H0ZM/edit#heading=h.c4r5wogk8vuz) and [Writable registers list](#writable-registers-list)). This reduces the current consumption below 20mA.
 
 In this mode, the NextPM cannot provide any measurement as it has stopped the majority of its functionalities (fan, laser, heater) but its communication remains functional.
 
@@ -87,7 +88,7 @@ To save more energy, if the user has the capability to, it is better to produce 
 
 ### 1.5 Temperature and relative humidity measurement <a href="#temperature-and-relative-humidity-measurement" id="temperature-and-relative-humidity-measurement"></a>
 
-The NextPM measures its internal temperature and relative humidity for its own need and these values are accessible thanks to reading commands (see [0x14 command reply](/broken/pages/BVDxpYneBr0jrNA0FSZc) and [Readable registers list](/broken/pages/BVDxpYneBr0jrNA0FSZc)).
+The NextPM measures its internal temperature and relative humidity for its own need and these values are accessible thanks to reading commands (see [0x14 command reply](#0x14-command-reply) and [Readable registers list](#readable-registers-list)).
 
 However, these internal values are biased by internal heat of the sensor due to PCB power dissipation and heater activation to improve PM measurements in a humid environment. So, the internal temperature and relative humidity are only technical data.
 
@@ -136,7 +137,7 @@ The state is coded on 2 bytes (1) and it contents flags correspondings to errors
 
 ## 2. NextPM communication <a href="#nextpm-communication" id="nextpm-communication"></a>
 
-The NextPM sensor is able to either communicate using a [simple protocol](/broken/pages/BVDxpYneBr0jrNA0FSZc) based only on proprietary UART frames or using [Modbus standard protocol](/broken/pages/BVDxpYneBr0jrNA0FSZc).
+The NextPM sensor is able to either communicate using a [simple protocol](#simple-protocol) based only on proprietary UART frames or using [Modbus standard protocol](#modbus-protocol).
 
 For both communication protocols, the physical layer is TTL 3.3V logical levels.
 
@@ -252,7 +253,7 @@ In this example, the measured concentrations are:
 
 
 
-* **2.2.2.3           0x14 command reply**
+* **2.2.2.3           0x14 command reply** <a href="#0x14-command-reply" id="0x14-command-reply"></a>
 
 | Address | Command code | State | Temperature | Humidity | Checksum |
 | ------- | ------------ | ----- | ----------- | -------- | -------- |
@@ -495,7 +496,7 @@ Measurement decoding example :
 
 
 
-2.3.3 Writable registers list
+#### 2.3.3 Writable registers list <a href="#writable-registers-list" id="writable-registers-list"></a>
 
 _The following registers are writable and accessible with a write or read/write multiple holding registers function command (0x10 or 0x17). These are advanced registers that need to be considered carefully before changed, as they may modify the sensor behaviour. We recommend contacting Tera Sensor before modifying them._
 
@@ -562,7 +563,7 @@ If you may have any doubts calculating the coefficients and off set for your cal
 
 
 
-#### 2.3.2 Error codes <a href="#readable-registers-list" id="readable-registers-list"></a>
+#### 2.3.4 Error codes <a href="#modbus-error-codes" id="modbus-error-codes"></a>
 
 The NextPM sensor is able to make specifi c reply depending on the Modbus frame received:
 
@@ -837,6 +838,6 @@ Please visit [https://tera-sensor.com/fr/](https://tera-sensor.com/fr/) to find 
 | 2020/10/21 | 3.4      | - Add additional information about NextPM integration advices (orientation)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | 2021/02/10 | 3.5      | - Add additional information about modbus NextPM available function codes - Put fan speed read command into correct corresponding chapter                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | 2021/04/02 | 3.6      | - Add baud rate modbus write command description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| 2024/08/30 | 4.0      | - user guide redesign and restructuring - Add [Accessories](/broken/pages/BVDxpYneBr0jrNA0FSZc) chapter, add 5 channels quantity modbus readable registers. - Add Mechanical tips chapter - Add Sequential measurements chapter - Add Electronic integrity chapter - Correct delay value, modbus address write simple protocol frame example content, remove simple protocole FAN speed write command, correct modbus PM reading reply decoding example, correct PM units for quantity per volume for simple protocol reading (pcs/L to pcs/mL), correct PM quantity decoding example for modbus protocol |
+| 2024/08/30 | 4.0      | - user guide redesign and restructuring - Add [Accessories](#id-9.-accessories) chapter, add 5 channels quantity modbus readable registers. - Add Mechanical tips chapter - Add Sequential measurements chapter - Add Electronic integrity chapter - Correct delay value, modbus address write simple protocol frame example content, remove simple protocole FAN speed write command, correct modbus PM reading reply decoding example, correct PM units for quantity per volume for simple protocol reading (pcs/L to pcs/mL), correct PM quantity decoding example for modbus protocol |
 | 2024/11/06 | 4.2      | <p>New sections add for the new fi rmware 1047:<br>-In Simple protocol communication, new commands for serial number, 5 channels particles number requests (on every time average 10s, 1min and 15min)<br>-In Mobus protocol communication, new commands for serial number, 5 channels particles number requests (on every time average 10s, 1min and 15min) and the possibility to modify coeffi cients and off set for PM measurements correction by the end user.</p>                                                                                                                                |
 | 25/06/2026 | 4.3      | Ajout des données TSP en modbus                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |

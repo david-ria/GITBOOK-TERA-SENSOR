@@ -1,5 +1,5 @@
 ---
-description: NEXT GENERATION PARTICULATE MATTER OEM SENSOR PM₁₀, PM₂.₅, PM₁
+description: EXTENDED-RANGE OEM SENSOR WITH TSP DETECTION PM₁₀, PM₂.₅, PM₁
 icon: newspaper
 ---
 

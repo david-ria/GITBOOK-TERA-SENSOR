@@ -1,4 +1,5 @@
 ---
+description: Setup and usage guide for the NextCO2 Delica demonstrator kit.
 icon: lightbulb-on
 ---
 

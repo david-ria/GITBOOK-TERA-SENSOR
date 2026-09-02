@@ -1,4 +1,5 @@
 ---
+description: Windows software and USB driver downloads to connect and configure a NextPM Advanced sensor from a PC.
 icon: windows
 ---
 

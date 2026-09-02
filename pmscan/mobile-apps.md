@@ -1,4 +1,5 @@
 ---
+description: Free Android and iOS apps to connect to a PMSCAN personal exposure monitor.
 icon: uncharted
 ---
 

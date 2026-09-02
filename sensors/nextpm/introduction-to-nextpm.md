@@ -1,4 +1,5 @@
 ---
+description: How NextPM's dual-angle optical detection measures PM₁, PM₂.₅ and PM₁₀, and the independent evaluations that validate its accuracy.
 icon: microscope
 ---
 

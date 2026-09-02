@@ -1,5 +1,5 @@
 ---
-description: 3D CAD FILE (STEP)
+description: 3D CAD FILE (STEP) FOR SENSOR SAFYROPC
 icon: cube
 ---
 

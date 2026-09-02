@@ -1,4 +1,5 @@
 ---
+description: Installation, wiring and Modbus RTU integration guide for the ePMDuct in-duct particulate monitoring probe.
 icon: lightbulb-on
 ---
 
@@ -320,9 +321,8 @@ When the sensor reaches its end of life (Total Time ON (sec)>36 000 000) or if a
 * **Open the Housing: Unscrew the four cover screws to access the internal components (Blue marks on picture above)**
 * **Sensor Replacement:**
   * Unplug the sensor's ribbon cable from the main PCB.
-  *
 
-      <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Figure 6 : ePMDuct inside connections for maintenance
 

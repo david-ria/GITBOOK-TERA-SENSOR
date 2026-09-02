@@ -1,4 +1,5 @@
 ---
+description: Connect a PMSCAN directly to a computer's browser over Bluetooth, with no software to install.
 icon: uncharted
 ---
 
