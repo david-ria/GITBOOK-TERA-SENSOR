@@ -303,4 +303,4 @@ Rousset D, Bau S, Matera V, Bemer D, Oury B.\
 Métrologie des Particules Fines et Ultrafines en Environnement de Travail\
 35e journées nationales de santé au travail dans le BTP
 
-https://www.sistbtp-lorraine.fr/wp-content/uploads/2019/07/Rousset-et-al-SST-BTP-2019-05-23\_vF.pdf
+https://www.sistbtp-lorraine.fr/wp-content/uploads/2019/07/Rousset-et-al-SST-BTP-2019-05-23_vF.pdf
